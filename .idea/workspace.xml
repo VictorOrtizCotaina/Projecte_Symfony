@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd4713ce-482e-490f-9ead-aa4d1327ceb7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -9,7 +11,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -137,12 +139,16 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1XKpoxD2CQsSoBaBUNza51oB7iO" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -159,20 +165,34 @@
       <updated>1580804818471</updated>
       <workItem from="1580804820144" duration="1535000" />
       <workItem from="1580901109749" duration="179000" />
+      <workItem from="1580901444219" duration="1284000" />
     </task>
+    <task id="LOCAL-00001" summary="Creació de les entitats.">
+      <created>1580901605954</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580901605954</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Creació de les entitats." />
+    <option name="LAST_COMMIT_MESSAGE" value="Creació de les entitats." />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2" timestamp="1580901576920">
+    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2" timestamp="1580901605792">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2/0.28.1920.1024@0.28.1920.1024" timestamp="1580901576920" />
-    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2" timestamp="1580901572067">
+    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2/0.28.1920.1024@0.28.1920.1024" timestamp="1580901605792" />
+    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2" timestamp="1580901608266">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2/0.28.1920.1024@0.28.1920.1024" timestamp="1580901572067" />
+    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2/0.28.1920.1024@0.28.1920.1024" timestamp="1580901608266" />
   </component>
 </project>

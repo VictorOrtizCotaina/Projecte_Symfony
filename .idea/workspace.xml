@@ -1,48 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd4713ce-482e-490f-9ead-aa4d1327ceb7" name="Default Changelist" comment="Creació del DefaultController.">
-      <change afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ForumController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/PostController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/TopicController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/CategoryType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ForumType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/PostType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/TopicType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/category/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/category/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/category/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/category/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/category/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/category/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/forum/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/forum/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/forum/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/forum/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/forum/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/forum/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/post/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/post/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/post/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/post/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/post/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/post/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/topic/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/topic/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/topic/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/topic/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/topic/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/topic/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/show.html.twig" afterDir="false" />
+    <list default="true" id="dd4713ce-482e-490f-9ead-aa4d1327ceb7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +166,8 @@
       <workItem from="1580804820144" duration="1535000" />
       <workItem from="1580901109749" duration="179000" />
       <workItem from="1580901444219" duration="1931000" />
-      <workItem from="1581348342656" duration="545000" />
+      <workItem from="1581348342656" duration="1029000" />
+      <workItem from="1581597843397" duration="1474000" />
     </task>
     <task id="LOCAL-00001" summary="Creació de les entitats.">
       <created>1580901605954</created>
@@ -220,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580906542689</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Creació dels CRUD de les entitats principals .">
+      <created>1581348933710</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581348933710</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,16 +200,21 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Creació de les entitats." />
     <MESSAGE value="Creació del DefaultController." />
-    <option name="LAST_COMMIT_MESSAGE" value="Creació del DefaultController." />
+    <MESSAGE value="Creació dels CRUD de les entitats principals ." />
+    <option name="LAST_COMMIT_MESSAGE" value="Creació dels CRUD de les entitats principals ." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2" timestamp="1580907935735">
+    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2" timestamp="1581348933143">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2/0.28.1920.1024@0.28.1920.1024" timestamp="1580907935735" />
-    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2" timestamp="1580906544528">
+    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2/0.28.1920.1024@0.28.1920.1024" timestamp="1581348933143" />
+    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2" timestamp="1581348936836">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2/0.28.1920.1024@0.28.1920.1024" timestamp="1580906544528" />
+    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2/0.28.1920.1024@0.28.1920.1024" timestamp="1581348936836" />
+    <state x="605" y="251" width="709" height="578" key="find.popup" timestamp="1581598520808">
+      <screen x="0" y="28" width="1920" height="1024" />
+    </state>
+    <state x="605" y="251" width="709" height="578" key="find.popup/0.28.1920.1024@0.28.1920.1024" timestamp="1581598520808" />
   </component>
 </project>

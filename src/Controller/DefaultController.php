@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="home")
      */
     public function index()
     {
@@ -19,7 +19,7 @@ class DefaultController extends AbstractController
         // retrieve all links
         $categories = $repository->findAll();
 
-        return $this->render('default/index.html.twig', [
+        return $this->render('front-office/index/index.html.twig', [
             'controller_name' => 'DefaultController',
             'categories' => $categories
         ]);

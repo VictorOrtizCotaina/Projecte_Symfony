@@ -2,16 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd4713ce-482e-490f-9ead-aa4d1327ceb7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/front-office/category/category.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front-office/category/show.category.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front-office/forum/forum.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front-office/forum/show.forum.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front-office/index/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front-office/index/show.index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front-office/login/login.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front-office/login/show.login.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front-office/register/register.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front-office/register/show.register.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front-office/topic/show.topic.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front-office/topic/topic.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front-office/user/show.user.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front-office/user/user.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/head.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/header.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -148,10 +163,27 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\Projecte_Symfony\templates" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -163,58 +195,36 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580804818471</updated>
-      <workItem from="1580804820144" duration="1535000" />
-      <workItem from="1580901109749" duration="179000" />
-      <workItem from="1580901444219" duration="1931000" />
-      <workItem from="1581348342656" duration="1029000" />
-      <workItem from="1581597843397" duration="1474000" />
+      <workItem from="1580804820144" duration="283000" />
+      <workItem from="1581015588680" duration="602000" />
+      <workItem from="1581149521240" duration="845000" />
+      <workItem from="1581156201186" duration="599000" />
+      <workItem from="1581247379893" duration="2406000" />
+      <workItem from="1581438857447" duration="255000" />
+      <workItem from="1581704011606" duration="1311000" />
+      <workItem from="1581707340263" duration="609000" />
     </task>
-    <task id="LOCAL-00001" summary="Creació de les entitats.">
-      <created>1580901605954</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1580901605954</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Creació del DefaultController.">
-      <created>1580906542689</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1580906542689</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Creació dels CRUD de les entitats principals .">
-      <created>1581348933710</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1581348933710</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Creació de les entitats." />
-    <MESSAGE value="Creació del DefaultController." />
-    <MESSAGE value="Creació dels CRUD de les entitats principals ." />
-    <option name="LAST_COMMIT_MESSAGE" value="Creació dels CRUD de les entitats principals ." />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2" timestamp="1581348933143">
-      <screen x="0" y="28" width="1920" height="1024" />
+    <state x="720" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581704145602">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2/0.28.1920.1024@0.28.1920.1024" timestamp="1581348933143" />
-    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2" timestamp="1581348936836">
-      <screen x="0" y="28" width="1920" height="1024" />
+    <state x="720" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581704145602" />
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1581711222708">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2/0.28.1920.1024@0.28.1920.1024" timestamp="1581348936836" />
-    <state x="605" y="251" width="709" height="578" key="find.popup" timestamp="1581598520808">
-      <screen x="0" y="28" width="1920" height="1024" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581711222708" />
+    <state x="640" y="312" width="640" height="407" key="git4idea.merge.GitPullDialog" timestamp="1581014242674">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="605" y="251" width="709" height="578" key="find.popup/0.28.1920.1024@0.28.1920.1024" timestamp="1581598520808" />
+    <state x="640" y="312" width="640" height="407" key="git4idea.merge.GitPullDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581014242674" />
+    <state x="773" y="368" key="git4idea.ui.GitUnstashDialog" timestamp="1581710830633">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="773" y="368" key="git4idea.ui.GitUnstashDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581710830633" />
   </component>
 </project>

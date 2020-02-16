@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -75,6 +76,20 @@ class Forum
      * })
      */
     private $idUser;
+
+    /**
+     * @var Topic[]|ArrayCollection
+     *
+     * @ORM\OneToMany(
+     *      targetEntity="Topic",
+     *      mappedBy="idForum",
+     * )
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_forum", referencedColumnName="id_forum")
+     * })
+     */
+    private $topics;
+
 
     public function getIdForum(): ?int
     {
@@ -166,4 +181,22 @@ class Forum
     }
 
 
+    public function addTopic(Topic ...$topics): void
+    {
+        foreach ($topics as $topic) {
+            if (!$this->topics->contains($topic)) {
+                $this->topics->add($topic);
+            }
+        }
+    }
+
+    public function removeTopic(Topic $topic): void
+    {
+        $this->topics->removeElement($topic);
+    }
+
+    public function getTopic(): Collection
+    {
+        return $this->topics;
+    }
 }

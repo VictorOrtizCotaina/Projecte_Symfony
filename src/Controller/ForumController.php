@@ -29,6 +29,17 @@ class ForumController extends AbstractController
     }
 
     /**
+     * @Route("/{idForum}", name="forum_show", methods={"GET"})
+     */
+    public function show(Forum $forum): Response
+    {
+        return $this->render('forum/show.html.twig', [
+            'forum' => $forum,
+        ]);
+    }
+
+
+    /**
      * @Route("/new", name="forum_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
@@ -51,15 +62,6 @@ class ForumController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{idForum}", name="forum_show", methods={"GET"})
-     */
-    public function show(Forum $forum): Response
-    {
-        return $this->render('forum/show.html.twig', [
-            'forum' => $forum,
-        ]);
-    }
 
     /**
      * @Route("/{idForum}/edit", name="forum_edit", methods={"GET","POST"})

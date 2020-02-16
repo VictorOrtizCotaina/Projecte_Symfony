@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd4713ce-482e-490f-9ead-aa4d1327ceb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front-office/category/category.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/category/category.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front-office/category/show.category.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/category/show.category.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front-office/index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/index/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front-office/index/show.index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/index/show.index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/head.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/head.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ForumController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ForumController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Forum.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Forum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front-office/forum/forum.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front-office/forum/show.forum.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,6 +197,7 @@
       <workItem from="1581872820793" duration="2229000" />
       <workItem from="1581877229244" duration="95000" />
       <workItem from="1581877700708" duration="2727000" />
+      <workItem from="1581888699196" duration="481000" />
     </task>
     <task id="LOCAL-00001" summary="Se añaden las plantillas del front-office.">
       <created>1581711258185</created>
@@ -233,10 +229,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="720" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581704145602" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1581879344100">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1581889186655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581879344100" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581889186655" />
     <state x="730" y="334" key="NewPhpClassDialog" timestamp="1581869956690">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

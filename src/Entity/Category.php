@@ -2,13 +2,14 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Category
  *
  * @ORM\Table(name="category", indexes={@ORM\Index(name="fk_Category_User1_idx", columns={"id_user"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\CategoryRepository")
  */
 class Category
 {
@@ -38,9 +39,9 @@ class Category
     /**
      * @var string|null
      *
-     * @ORM\Column(name="image", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="image", type="string", length=255, nullable=true, options={"default"="icon-folder.png"})
      */
-    private $image = 'NULL';
+    private $image = 'icon-folder.png';
 
     /**
      * @var \DateTime|null
@@ -65,6 +66,20 @@ class Category
      * })
      */
     private $idUser;
+
+    /**
+     * @var Forum[]|ArrayCollection
+     *
+     * @ORM\OneToMany(
+     *      targetEntity="Forum",
+     *      mappedBy="idCategory",
+     * )
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_category", referencedColumnName="id_category")
+     * })
+     */
+    private $forums;
+
 
     public function getIdCategory(): ?int
     {
@@ -141,6 +156,27 @@ class Category
         $this->idUser = $idUser;
 
         return $this;
+    }
+
+
+
+    public function addForum(Forum ...$forums): void
+    {
+        foreach ($forums as $forum) {
+            if (!$this->forums->contains($forum)) {
+                $this->forums->add($forum);
+            }
+        }
+    }
+
+    public function removeForum(Forum $forum): void
+    {
+        $this->forums->removeElement($forum);
+    }
+
+    public function getForum(): Collection
+    {
+        return $this->forums;
     }
 
 

@@ -17,11 +17,12 @@ class DefaultController extends AbstractController
         $repository = $this->getDoctrine()->getRepository(Category::class);
 
         // retrieve all links
-        $categories = $repository->findAll();
+        $categories = $repository->findAllCategories();
 
-        return $this->render('front-office/index/index.html.twig', [
+        return $this->render('front-office/index/show.index.html.twig', [
             'controller_name' => 'DefaultController',
-            'categories' => $categories
+            'categories' => $categories,
+            'target_dir' => "/img/"
         ]);
     }
 }

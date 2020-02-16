@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Forum
  *
  * @ORM\Table(name="forum", indexes={@ORM\Index(name="fk_Forum_Category1_idx", columns={"id_category"}), @ORM\Index(name="fk_Forum_User1_idx", columns={"id_user"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\ForumRepository")
  */
 class Forum
 {
@@ -38,9 +38,9 @@ class Forum
     /**
      * @var string|null
      *
-     * @ORM\Column(name="image", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="image", type="string", length=255, nullable=true, options={"default"="icon-folder.png"})
      */
-    private $image = 'NULL';
+    private $image = 'icon-folder.png';
 
     /**
      * @var \DateTime|null

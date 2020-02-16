@@ -1,4 +1,4 @@
-{% extends "templates/front-office/category/category.twig" %}
+{% extends "front-office/index/index.html.twig" %}
 {% block title %}
     {{ title }}
 {% endblock %}
@@ -19,11 +19,11 @@
                 </thead>
                 <tbody class="topiclist forums">
 
-                {#{% for forum in category.forums %}
+                {% for forum in category.forum %}
                     <tr>
                         <td class="forum-name" title="No unread posts">
 							<span class="pull-left forum-icon">
-								<a href="{{ router.generateURL('Forum', 'getForum', {id_category: category.idCategory, id_forum: forum.idForum}) }}"
+								<a href="{#{{ router.generateURL('Forum', 'getForum', {id_category: category.idCategory, id_forum: forum.idForum}) }}#}"
                                    class="btn btn-lg btn-default tooltip-link">
                                     <div class="">
                                         <img width="32" height="32"
@@ -38,7 +38,7 @@
                                 <i class="fa fa-folder fa-fw"></i>
 
                             </div>
-                            <a href="{{ router.generateURL('Forum', 'getForum', {id_category: category.idCategory, id_forum: forum.idForum}) }}"
+                            <a href="{#{{ router.generateURL('Forum', 'getForum', {id_category: category.idCategory, id_forum: forum.idForum}) }}#}"
                                class="forumtitle">{{ forum.title }}</a><br/>
                             <small>{{ forum.description }}</small>
 
@@ -47,7 +47,7 @@
                         <td><span class="badge">No esta implementado</span></td>
                         <td><span class="badge">No esta implementado</span></td>
                     </tr>
-                {% endfor %}#}
+                {% endfor %}
                 </tbody>
             </table>
         </div>

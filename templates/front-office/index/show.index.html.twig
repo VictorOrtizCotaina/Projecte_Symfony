@@ -9,7 +9,7 @@
                 <thead class="topiclist">
                 <tr>
                     <th class="forum-name"><i class="fa fa-sitemap"></i> <a
-                                href="{#{{ router.generateURL('Category', 'getCategory', {id_category: category.idCategory}) }}#}">
+                                href="{{ path('category_show', {'idCategory': category.idCategory}) }}">
                             {{ category.title }}
                         </a></th>
                     <th class="topics"><i class="fa fa-comments-o"></i> Topics</th>
@@ -24,6 +24,7 @@
                         <td class="forum-name" title="No unread posts">
 							<span class="pull-left forum-icon">
 								<a href="{#{{ router.generateURL('Forum', 'getForum', {id_category: category.idCategory, id_forum: forum.idForum}) }}#}"
+
                                    class="btn btn-lg btn-default tooltip-link">
                                     <div class="">
                                         <img width="32" height="32"

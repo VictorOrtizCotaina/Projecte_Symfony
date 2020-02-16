@@ -22,6 +22,7 @@ class DefaultController extends AbstractController
         return $this->render('front-office/index/show.index.html.twig', [
             'controller_name' => 'DefaultController',
             'categories' => $categories,
+            'title' => "Foro Programacion • Home",
             'target_dir' => "/img/"
         ]);
     }

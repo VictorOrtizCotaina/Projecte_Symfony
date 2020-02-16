@@ -1,4 +1,4 @@
-{% extends "front-office/category/category.twig" %}
+{% extends "front-office/category/category.html.twig" %}
 {% block title %}
     {{ title }}
 {% endblock %}
@@ -7,7 +7,7 @@
         <h2>{{ category.title }}</h2>
     </div>
 
-    {% for forum in category.forums %}
+    {% for forum in category.forum %}
         <div class="table-responsive">
             <table class="table table-striped table-bordered">
                 <thead class="topiclist">
@@ -23,7 +23,7 @@
                 <tr>
                     <td class="forum-name" title="No unread posts">
 						<span class="pull-left forum-icon">
-							<a href="{{ router.generateURL('Forum', 'getForum', {id_category: category.idCategory, id_forum: forum.idForum}) }}"
+							<a href="{#{{ router.generateURL('Forum', 'getForum', {id_category: category.idCategory, id_forum: forum.idForum}) }}#}"
                                class="btn btn-lg btn-default tooltip-link" title="No unread posts">
                                 <div class="">
                                     <img width="32" height="32" src="{{ target_dir }}{{ forum.image }}">
@@ -35,7 +35,7 @@
                             <i class="fa fa-folder fa-fw"></i>
 
                         </div>
-                        <a href="{{ router.generateURL('Forum', 'getForum', {id_category: category.idCategory, id_forum: forum.idForum}) }}"
+                        <a href="{#{{ router.generateURL('Forum', 'getForum', {id_category: category.idCategory, id_forum: forum.idForum}) }}#}"
                            class="forumtitle">{{ forum.title }}</a><br/>
                         <small>{{ forum.description }}</small>
 

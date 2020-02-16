@@ -3,7 +3,7 @@
         <div class="container-fluid">
 
             <div id="search-menu">
-                <a class="navbar-brand" href="{#{{ router.generateURL('Category', 'index') }}#}">Foro Programacion</a>
+                <a class="navbar-brand" href="{{ path('home') }}">Foro Programacion</a>
 
                 {#{% if not session.user %}
                     <a class="btn navbar-form navbar-left ng-pristine ng-valid"
@@ -78,7 +78,7 @@
 
     <div class="jumbotron no-margin-bottom no-padding-bottom">
         <div class="container text-center">
-            <div id="site-logo"><a href="{#{{ router.generateURL('Category', 'index') }}#}"
+            <div id="site-logo"><a href="{{ path('home') }}"
                                    title="Board index"><h2>Foro Programacion</h2></a></div>
 
         </div>

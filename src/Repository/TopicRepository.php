@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Topic;
 use App\Pagination\Paginator;
+use DateTime;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
@@ -21,13 +22,23 @@ class TopicRepository extends ServiceEntityRepository
     }
 
 
-    public function findAllTopicbyForum(int $idForum, int $page = 1): Paginator{
+    public function findAllTopicbyForum(int $idForum, int $page = 1, string $text = null, DateTime $startDate = null, DateTime $endDate = null): Paginator{
         $query = $this->createQueryBuilder('t')
             ->addSelect('u')
             ->innerJoin('t.user', 'u')
             ->where("t.idForum = :id_forum")
             ->andwhere("t.idUser = u.idUser")
             ->setParameter('id_forum', $idForum);
+
+        if (null != $text) {
+            $query->andWhere("CONCAT(t.title, '', t.description) LIKE :text")
+                ->setParameter('text', '%'.$text.'%');
+        }
+        if (null != $startDate && null != $endDate) {
+            $query->andWhere('t.date_add between :startDate and :endDate')
+                ->setParameter('startDate', $startDate)
+                ->setParameter('endDate', $endDate);
+        }
 
         return (new Paginator($query, 2))->paginate($page);
     }

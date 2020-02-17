@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Forum;
 use App\Entity\Topic;
+use App\Form\FilterTopicType;
 use App\Form\ForumType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -34,21 +35,39 @@ class ForumController extends AbstractController
      * @Route("/{idForum}", defaults={"page": "1"}, name="forum_show", methods={"GET"})
      * @Route("/{idForum}/page/{page<[1-9]\d*>}", methods="GET", name="forum_show_paginated")
      */
-    public function show(Forum $forum, int $page): Response
+    public function show(Forum $forum, Request $request, int $page): Response
     {
+        $text = null;
+        $startDate = null;
+        $endDate = null;
+        $tag = null;
+        $idForum = $forum->getIdForum();
+
         $forum = $this->getDoctrine()
             ->getRepository(Forum::class)
-            ->findbyForum($forum->getIdForum());
+            ->findbyForum($idForum);
+
+
+        $form = $this->createForm(FilterTopicType::class);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $text = $form->get('text')->getData();
+            $startDate = $form->get('startDate')->getData();
+            $endDate = $form->get('endDate')->getData();
+        }
 
         $topics = $this->getDoctrine()
             ->getRepository(Topic::class)
-            ->findAllTopicbyForum($forum->getIdForum(), $page);
+            ->findAllTopicbyForum($idForum, $page, $text, $startDate, $endDate);
 
 
         return $this->render('front-office/forum/show.forum.html.twig', [
             'forum' => $forum,
             'topics' => $topics,
             'title' => "Foro Programacion • " . $forum->getTitle(),
+            'filterForm' => $form->createView(),
+//            'query' => $request->query->all(),
             'target_dir' => "/img/"
         ]);
     }

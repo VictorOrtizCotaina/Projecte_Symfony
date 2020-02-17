@@ -31,66 +31,12 @@
         <div class="col-md-3 col-xs-12"></div>
         <div class="col-md-6 text-center col-xs-12">
             <div class="btn-group forum-pagination">
-                {#<nav aria-label="Page navigation">
-                    <ul class="pagination">
-                        {% if Previous > 0 %}
-                        {% if id_forum != 0 %}
-                        <li>
-                            <a href="{{ router.generateURL('Forum', 'getForum', {id_category: forum.idCategory, id_forum: forum.idForum}, {page: Previous, search_keywords: search, dateIni: dateIni, dateFin: dateFin}) }}"
-                               aria-label="Previous">
-                            <span aria-hidden="true">&laquo; Previous</span>
-                            </a>
-                        </li>
-                        {% endif %}
-                        {% if id_user != 0 %}
-                        <li>
-                            <a href="{{ router.generateURL('Forum', 'getForumUser', {id_user: id_user}, {page: Previous, search_keywords: search, dateIni: dateIni, dateFin: dateFin}) }}"
-                            aria-label="Previous">
-                            <span aria-hidden="true">&laquo; Previous</span>
-                            </a>
-                        </li>
-                        {% endif %}
-                        {% endif %}
-                        {% for i in 1..pages %}
-                        {% if id_forum != 0 %}
-                        <li>
-                            <a href="{{ router.generateURL('Forum', 'getForum', {id_category: forum.idCategory, id_forum: forum.idForum}, {page: i, search_keywords: search, dateIni: dateIni, dateFin: dateFin}) }}">{{ i }}</a>
-                        </li>
-                        {% endif %}
-                        {% if id_user != 0 %}
-                        <li>
-                            <a href="{{ router.generateURL('Forum', 'getForumUser', {id_user: id_user}, {page: i, search_keywords: search, dateIni: dateIni, dateFin: dateFin}) }}"
-                            aria-label="Previous">{{ i }}</a>
-                        </li>
-                        {% endif %}
-                        {% endfor %}
-                        {% if Next <= pages %}
-                        {% if id_forum != 0 %}
-                        <li>
-                            <a href="{{ router.generateURL('Forum', 'getForum', {id_category: forum.idCategory, id_forum: forum.idForum}, {page: Next, search_keywords: search, dateIni: dateIni, dateFin: dateFin}) }}"
-                            aria-label="Next">
-                            <span aria-hidden="true">Next &raquo;</span>
-                            </a>
-                        </li>
-                        {% endif %}
-                        {% if id_user != 0 %}
-                        <li>
-                            <a href="{{ router.generateURL('Forum', 'getForumUser', {id_user: id_user}, {page: Next, search_keywords: search, dateIni: dateIni, dateFin: dateFin}) }}"
-                            aria-label="Previous">
-                            <span aria-hidden="true">Next &raquo;</span>
-                            </a>
-                        </li>
-                        {% endif %}
-                        {% endif %}
-                    </ul>
-                </nav>#}
-
                 {{ include('./pagination.html.twig', {paginator : topics, query: {'idForum' : forum.idForum}, router_name: 'forum_show_paginated'}) }}
             </div>
         </div>
 
-        {#<div class="col-md-3 col-xs-12 pull-right">
-            <form
+        <div class="col-md-3 col-xs-12 pull-right">
+            {#<form
                     action="{% if forum %}
                             {{ router.generateURL('Forum', 'getForum', {id_category: forum.idCategory, id_forum: forum.idForum}, {page: page}) }}
                          {% endif %}
@@ -121,13 +67,29 @@
                         <input type="submit" class="btn btn-default" name="submitFilter" value="Filtrar">
 					</span>
 
-            </form>
-        </div>#}
+            </form>#}
+            <div class="col">
+                {{ form_start(filterForm) }}
+                <div class="row">
+                    {{ form_row(filterForm.text) }}
+                </div>
+                <div class="row">
+                    <div class="col">
+                        {{ form_row(filterForm.startDate) }}
+                    </div>
+                    <div class="col">
+                        {{ form_row(filterForm.endDate) }}
+                    </div>
+                </div>
+                {{ form_widget(filterForm) }}
+                {{ form_end(filterForm) }}
+            </div>
+        </div>
 
 
-        {#<div class="col-md-6 col-xs-12">
-            <p> Numero de Topics: {{ topicCount }}
-                {% if search %}
+        <div class="col-md-6 col-xs-12">
+            <p> Numero de Topics: {{ topics.numResults }}
+                {#{% if search %}
             <p> Busqueda: {{ search }} </p>
             {% endif %}
                 {% if dateIni %}
@@ -135,9 +97,9 @@
             {% endif %}
                 {% if dateFin %}
             <p> Fecha Fin: {{ dateFin }} </p>
-            {% endif %}
+            {% endif %}#}
 
-        </div>#}
+        </div>
     </div>
 
     <div class="forumbg table-responsive ">
@@ -167,17 +129,17 @@
                                         <!--										<i class="fa fa-file-text-o fa-fw"></i>-->
 								</a></span>
                     </div>
-                    <div class="pull-right topic-pagination">
+                   {# <div class="pull-right topic-pagination">
                         <div class="btn-group pagination-line">
                             <a class="btn btn-default btn-xs tooltip-link"
                                href="{{ path('topic_show', {'idTopic' : topic.idTopic}) }}"
                                title="Last post"><i class="fa fa-angle-double-right"></i></a>
                         </div>
-                    </div>
+                    </div>#}
                     <div class="forum-topic-icon-mobile">
                         <i class="fa fa-file-text-o"></i>
                     </div>
-                    <a href="{#{{ router.generateURL('Topic', 'getTopic', {id_category: forum.idCategory, id_forum: topic.idForum, id_topic: topic.idTopic}) }}#}"
+                    <a href="{{ path('topic_show', {'idTopic' : topic.idTopic}) }}"
                        class="topictitle">
                         <strong>{{ topic.title }}</strong>
                     </a>
@@ -215,62 +177,7 @@
         <div class="col-md-3 col-xs-12"></div>
         <div class="col-md-6 text-center col-xs-12">
             <div class="btn-group forum-pagination">
-                {#<nav aria-label="Page navigation">
-                    <ul class="pagination">
-                        {% if Previous > 0 %}
-                            {% if id_forum != 0 %}
-                                <li>
-                                    <a href="{{ router.generateURL('Forum', 'getForum', {id_category: forum.idCategory, id_forum: forum.idForum}, {page: Previous, search_keywords: search, dateIni: dateIni, dateFin: dateFin}) }}"
-                                       aria-label="Previous">
-                                        <span aria-hidden="true">&laquo; Previous</span>
-                                    </a>
-                                </li>
-                            {% endif %}
-                            {% if id_user != 0 %}
-                                <li>
-                                    <a href="{{ router.generateURL('Forum', 'getForumUser', {id_user: id_user}, {page: Previous, search_keywords: search, dateIni: dateIni, dateFin: dateFin}) }}"
-                                       aria-label="Previous">
-                                        <span aria-hidden="true">&laquo; Previous</span>
-                                    </a>
-                                </li>
-                            {% endif %}
-                        {% endif %}
-                        {% for i in 1..pages %}
-                            {% if id_forum != 0 %}
-                                <li>
-                                    <a href="{{ router.generateURL('Forum', 'getForum', {id_category: forum.idCategory, id_forum: forum.idForum}, {page: i, search_keywords: search, dateIni: dateIni, dateFin: dateFin}) }}">
-                                        {{ i }}
-                                    </a>
-                                </li>
-                            {% endif %}
-                            {% if id_user != 0 %}
-                                <li>
-                                    <a href="{{ router.generateURL('Forum', 'getForumUser', {id_user: id_user}, {page: i, search_keywords: search, dateIni: dateIni, dateFin: dateFin}) }}"
-                                       aria-label="Previous">{{ i }}
-                                    </a>
-                                </li>
-                            {% endif %}
-                        {% endfor %}
-                        {% if Next <= pages %}
-                            {% if id_forum != 0 %}
-                                <li>
-                                    <a href="{{ router.generateURL('Forum', 'getForum', {id_category: forum.idCategory, id_forum: forum.idForum}, {page: Next, search_keywords: search, dateIni: dateIni, dateFin: dateFin}) }}"
-                                       aria-label="Next">
-                                        <span aria-hidden="true">Next &raquo;</span>
-                                    </a>
-                                </li>
-                            {% endif %}
-                            {% if id_user != 0 %}
-                                <li>
-                                    <a href="{{ router.generateURL('Forum', 'getForumUser', {id_user: id_user}, {page: Next, search_keywords: search, dateIni: dateIni, dateFin: dateFin}) }}"
-                                       aria-label="Previous">
-                                        <span aria-hidden="true">Next &raquo;</span>
-                                    </a>
-                                </li>
-                            {% endif %}
-                        {% endif %}
-                    </ul>
-                </nav>#}
+                {{ include('./pagination.html.twig', {paginator : topics, query: {'idForum' : forum.idForum}, router_name: 'forum_show_paginated'}) }}
             </div>
         </div>
 

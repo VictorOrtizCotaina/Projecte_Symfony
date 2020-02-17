@@ -3,7 +3,6 @@
     {{ title }}
 {% endblock %}
 {% block body %}
-{{ dump(forum) }}
     {% if forum %}
     <div class="page-header">
         <h2>{{ forum.title }}</h2>
@@ -157,7 +156,7 @@
                     <div class="pull-left forum-topic-icon">
 								<span>
 {#                                    <?php if (!isset($forum)) $forum = $forumModel->getForumById($topic->getIdForum()); ?>#}
-                                    <a href="{#{{ router.generateURL('Topic', 'getTopic', {id_category: forum.idCategory, id_forum: topic.idForum, id_topic: topic.idTopic}) }}#}"
+                                    <a href="{{ path('topic_show', {'idTopic' : topic.idTopic}) }}"
                                        class="btn btn-default btn-lg tooltip-link">
                                         <div class="">
                                             <img width="32" height="32"
@@ -169,7 +168,7 @@
                     <div class="pull-right topic-pagination">
                         <div class="btn-group pagination-line">
                             <a class="btn btn-default btn-xs tooltip-link"
-                               href="{#{{ router.generateURL('Topic', 'getTopic', {id_category: forum.idCategory, id_forum: topic.idForum, id_topic: topic.idTopic}) }}#}"
+                               href="{{ path('topic_show', {'idTopic' : topic.idTopic}) }}"
                                title="Last post"><i class="fa fa-angle-double-right"></i></a>
                         </div>
                     </div>

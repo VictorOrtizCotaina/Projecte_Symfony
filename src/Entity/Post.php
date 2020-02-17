@@ -76,6 +76,19 @@ class Post
      */
     private $idUser;
 
+    /**
+     * @var \User
+     *
+     * @ORM\ManyToOne(
+     *      targetEntity="User"
+     * )
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_user", referencedColumnName="id_user")
+     * })
+     */
+    private $user;
+
+
     public function getIdPost(): ?int
     {
         return $this->idPost;
@@ -165,5 +178,16 @@ class Post
         return $this;
     }
 
+
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(User $user): void
+    {
+        $this->user = $user;
+    }
 
 }

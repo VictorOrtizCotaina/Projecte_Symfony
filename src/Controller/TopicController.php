@@ -28,6 +28,25 @@ class TopicController extends AbstractController
         ]);
     }
 
+
+    /**
+     * @Route("/{idTopic}", name="topic_show", methods={"GET"})
+     */
+    public function show(Topic $topic): Response
+    {
+        $topic = $this->getDoctrine()
+            ->getRepository(Topic::class)
+            ->findbyTopic($topic->getIdTopic())[0];
+
+
+        return $this->render('front-office/topic/show.topic.html.twig', [
+            'topic' => $topic,
+            'title' => "Foro Programacion • " . $topic->getTitle(),
+            'target_dir' => "/img/"
+        ]);
+    }
+
+
     /**
      * @Route("/new", name="topic_new", methods={"GET","POST"})
      */
@@ -54,12 +73,12 @@ class TopicController extends AbstractController
     /**
      * @Route("/{idTopic}", name="topic_show", methods={"GET"})
      */
-    public function show(Topic $topic): Response
+/*    public function show(Topic $topic): Response
     {
         return $this->render('topic/show.html.twig', [
             'topic' => $topic,
         ]);
-    }
+    }*/
 
     /**
      * @Route("/{idTopic}/edit", name="topic_edit", methods={"GET","POST"})

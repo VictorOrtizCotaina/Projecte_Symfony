@@ -1,4 +1,4 @@
-{% extends "front-office/topic/topic.twig" %}
+{% extends "front-office/topic/topic.html.twig" %}
 {% block title %}
     {{ title }}
 {% endblock %}
@@ -12,6 +12,7 @@
     </div>
 
 
+{#
     <div class="row mobile-fix">
 
         <div class="col-md-3 text-center col-xs-12">
@@ -33,7 +34,9 @@
                         </li>
                         {% endif %}
                         {% for i in 1..pages %}
-{#                        <?php for ($i = 1; $i <= $pages; $i++) : ?>#}
+#}
+{#                        <?php for ($i = 1; $i <= $pages; $i++) : ?>#}{#
+
                         <li>
                             <a href="{{ router.generateURL('Topic', 'getTopic', {id_category: forum.idCategory, id_forum: forum.idForum, id_topic: topic.idTopic}, {num_page: i}) }}">{{ i }}</a>
                         </li>
@@ -53,8 +56,9 @@
         </div>
 
     </div>
+#}
 
-    {% for post in posts %}
+    {% for post in topic.posts %}
     <div>
         <div class="panel panel-primary">
             <div class="panel-heading">
@@ -71,7 +75,7 @@
                                      src="{{ target_dir }}{{ post.user.avatar }}" alt="avatar">
                             </dt>
                             <dd class="text-center">
-                                <a href="{{ router.generateURL('Forum', 'getForumUser', {id_user: post.idUser}) }}">
+                                <a href="{#{{ router.generateURL('Forum', 'getForumUser', {id_user: post.idUser}) }}#}">
                                     {{ post.user.username }}
                                 </a>
                             </dd>
@@ -92,7 +96,7 @@
 
                         <div class="row post-head hidden-xs no-margin-bottom">
                             <div class="col-md-6 col-xs-6 author">
-                                by <strong><a href="{{ router.generateURL('Forum', 'getForumUser', {id_user: post.idUser}) }}">
+                                by <strong><a href="{#{{ router.generateURL('Forum', 'getForumUser', {id_user: post.idUser}) }}#}">
                                         {{ post.user.username }}</a></strong> &raquo;
                                 {{ post.dateAdd|date("Y-m-d H:i") }}
                             </div>
@@ -112,7 +116,7 @@
     {% endfor %}
 
 
-    <div class="row mobile-fix">
+    {#<div class="row mobile-fix">
 
         <div class="col-md-3"></div>
         <div class="col-md-6 text-center col-xs-12">
@@ -144,6 +148,6 @@
                     </ul>
                 </nav>
             </div>
-        </div>
+        </div>#}
 
 {% endblock %}

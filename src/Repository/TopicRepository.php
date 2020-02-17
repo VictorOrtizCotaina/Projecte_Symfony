@@ -33,4 +33,23 @@ class TopicRepository extends ServiceEntityRepository
 
         return $query->getResult();
     }
+
+
+    /**
+     * @return Topic
+     */
+    public function findbyTopic(string $idTopic): array{
+        $query = $this->createQueryBuilder('t')
+            ->addSelect('p', 'u')
+            ->innerJoin('t.posts', 'p')
+            ->innerJoin('t.user', 'u')
+            ->where("t.idTopic = :id_topic")
+            ->andwhere("t.idTopic = p.idTopic")
+            ->andwhere("t.idUser = u.idUser")
+            ->setParameter('id_topic', $idTopic)
+            ->getQuery();
+
+        return $query->getResult();
+    }
+
 }

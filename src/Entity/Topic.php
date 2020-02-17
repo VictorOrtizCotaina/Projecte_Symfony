@@ -2,13 +2,14 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Topic
  *
  * @ORM\Table(name="topic", indexes={@ORM\Index(name="fk_Topic_User1_idx", columns={"id_user"}), @ORM\Index(name="fk_Topic_Forum1_idx", columns={"id_forum"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\TopicRepository")
  */
 class Topic
 {
@@ -83,6 +84,18 @@ class Topic
      */
     private $idUser;
 
+    /**
+     * @var Post[]|ArrayCollection
+     *
+     * @ORM\OneToMany(
+     *      targetEntity="Post",
+     *      mappedBy="idTopic",
+     * )
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_topic", referencedColumnName="id_topic")
+     * })
+     */
+    private $posts;
 
     /**
      * @var \User
@@ -199,6 +212,24 @@ class Topic
     }
 
 
+    public function addPosts(Post ...$posts): void
+    {
+        foreach ($posts as $post) {
+            if (!$this->posts->contains($post)) {
+                $this->posts->add($post);
+            }
+        }
+    }
+
+    public function removePosts(Post $post): void
+    {
+        $this->posts->removeElement($post);
+    }
+
+    public function getPosts(): Collection
+    {
+        return $this->posts;
+    }
 
     public function getUser(): ?User
     {

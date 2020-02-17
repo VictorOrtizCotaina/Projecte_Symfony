@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Topic;
+use App\Pagination\Paginator;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
@@ -19,26 +20,23 @@ class TopicRepository extends ServiceEntityRepository
         parent::__construct($registry, Topic::class);
     }
 
-    /**
-     * @return Topic[]
-     */
-    public function findAllTopic(): array{
-        $query = $this->createQueryBuilder('f')
-            ->addSelect('c')
-            ->innerJoin('f.idCategory', 'c')
-            ->andwhere("c.idCategory = f.idCategory")
-            ->andwhere("c.active = 1")
-            ->orderBy('c.dateAdd', 'DESC')
-            ->getQuery();
 
-        return $query->getResult();
+    public function findAllTopicbyForum(int $idForum, int $page = 1): Paginator{
+        $query = $this->createQueryBuilder('t')
+            ->addSelect('u')
+            ->innerJoin('t.user', 'u')
+            ->where("t.idForum = :id_forum")
+            ->andwhere("t.idUser = u.idUser")
+            ->setParameter('id_forum', $idForum);
+
+        return (new Paginator($query, 2))->paginate($page);
     }
 
 
     /**
      * @return Topic
      */
-    public function findbyTopic(string $idTopic): array{
+    public function findbyTopic(int $idTopic): Topic{
         $query = $this->createQueryBuilder('t')
             ->addSelect('p', 'u')
             ->innerJoin('t.posts', 'p')
@@ -49,7 +47,7 @@ class TopicRepository extends ServiceEntityRepository
             ->setParameter('id_topic', $idTopic)
             ->getQuery();
 
-        return $query->getResult();
+        return $query->getSingleResult();
     }
 
 }

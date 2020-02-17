@@ -84,6 +84,8 @@
                         {% endif %}
                     </ul>
                 </nav>#}
+
+                {{ include('./pagination.html.twig', {paginator : topics, query: {'idForum' : forum.idForum}, router_name: 'forum_show_paginated'}) }}
             </div>
         </div>
 
@@ -150,7 +152,7 @@
             </thead>
             <tbody class="topiclist topics">
 
-            {% for topic in forum.topic %}
+            {% for topic in topics.results %}
             <tr class="t-row">
                 <td class="topic-name " title="No unread posts">
                     <div class="pull-left forum-topic-icon">

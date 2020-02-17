@@ -36,7 +36,7 @@ class TopicController extends AbstractController
     {
         $topic = $this->getDoctrine()
             ->getRepository(Topic::class)
-            ->findbyTopic($topic->getIdTopic())[0];
+            ->findbyTopic($topic->getIdTopic());
 
 
         return $this->render('front-office/topic/show.topic.html.twig', [

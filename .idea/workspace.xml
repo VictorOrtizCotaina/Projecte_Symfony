@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd4713ce-482e-490f-9ead-aa4d1327ceb7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Pagination/Paginator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pagination.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ForumController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ForumController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/TopicController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TopicController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Topic.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Topic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ForumRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ForumRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/TopicRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/TopicRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front-office/forum/show.forum.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/forum/show.forum.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front-office/topic/show.topic.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/topic/show.topic.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front-office/topic/topic.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/topic/topic.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,11 +170,13 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Repository" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/Repository" />
     </key>
   </component>
@@ -197,7 +199,8 @@
       <workItem from="1581663781812" duration="113000" />
       <workItem from="1581945129433" duration="171000" />
       <workItem from="1581945302874" duration="1652000" />
-      <workItem from="1581925815229" duration="6737000" />
+      <workItem from="1581925815229" duration="10831000" />
+      <workItem from="1581938046442" duration="1293000" />
     </task>
     <task id="LOCAL-00001" summary="Creació de les entitats.">
       <created>1580901605954</created>
@@ -234,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581929638427</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Se configura la pagina de topic.">
+      <created>1581954365975</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1581954365975</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,25 +257,26 @@
     <MESSAGE value="Creació dels CRUD de les entitats principals ." />
     <MESSAGE value="Index." />
     <MESSAGE value="Se configura la pagina de forum." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se configura la pagina de forum." />
+    <MESSAGE value="Se configura la pagina de topic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se configura la pagina de topic." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="693" y="298" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581953759126">
+    <state x="693" y="298" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581957852915">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="693" y="298" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1581953759126" />
-    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2" timestamp="1581929636833">
+    <state x="693" y="298" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1581957852915" />
+    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2" timestamp="1581954365625">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2/0.28.1920.1024@0.28.1920.1024" timestamp="1581929636833" />
+    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2/0.28.1920.1024@0.28.1920.1024" timestamp="1581954365625" />
     <state x="738" y="283" width="426" height="512" key="FileChooserDialogImpl" timestamp="1581945774018">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="738" y="283" width="426" height="512" key="FileChooserDialogImpl/0.28.1920.1024@0.28.1920.1024" timestamp="1581945774018" />
-    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2" timestamp="1581929640810">
+    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2" timestamp="1581954369122">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2/0.28.1920.1024@0.28.1920.1024" timestamp="1581929640810" />
+    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2/0.28.1920.1024@0.28.1920.1024" timestamp="1581954369122" />
     <state x="605" y="251" width="709" height="578" key="find.popup" timestamp="1581598520808">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>

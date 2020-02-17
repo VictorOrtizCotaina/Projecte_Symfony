@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
-use App\Entity\Category;
 use App\Entity\Forum;
+use App\Entity\Topic;
 use App\Form\ForumType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -31,17 +31,23 @@ class ForumController extends AbstractController
 
 
     /**
-     * @Route("/{idForum}", name="forum_show", methods={"GET"})
+     * @Route("/{idForum}", defaults={"page": "1"}, name="forum_show", methods={"GET"})
+     * @Route("/{idForum}/page/{page<[1-9]\d*>}", methods="GET", name="forum_show_paginated")
      */
-    public function show(Forum $forum): Response
+    public function show(Forum $forum, int $page): Response
     {
         $forum = $this->getDoctrine()
             ->getRepository(Forum::class)
-            ->findbyForum($forum->getIdForum())[0];
+            ->findbyForum($forum->getIdForum());
+
+        $topics = $this->getDoctrine()
+            ->getRepository(Topic::class)
+            ->findAllTopicbyForum($forum->getIdForum(), $page);
 
 
         return $this->render('front-office/forum/show.forum.html.twig', [
             'forum' => $forum,
+            'topics' => $topics,
             'title' => "Foro Programacion • " . $forum->getTitle(),
             'target_dir' => "/img/"
         ]);

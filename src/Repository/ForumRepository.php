@@ -39,7 +39,7 @@ class ForumRepository extends ServiceEntityRepository
     /**
      * @return Forum
      */
-    public function findbyForum(string $idForum): array{
+    public function findbyForum(int $idForum): Forum{
         $query = $this->createQueryBuilder('f')
             ->addSelect('t', 'u')
             ->innerJoin('f.topics', 't')
@@ -50,7 +50,7 @@ class ForumRepository extends ServiceEntityRepository
             ->setParameter('id_forum', $idForum)
             ->getQuery();
 
-        return $query->getResult();
+        return $query->getSingleResult();
     }
 
 }

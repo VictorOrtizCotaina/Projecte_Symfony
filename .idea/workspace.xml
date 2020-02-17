@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd4713ce-482e-490f-9ead-aa4d1327ceb7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Form/FilterTopicType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ForumController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ForumController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/TopicRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/TopicRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front-office/forum/show.forum.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/forum/show.forum.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pagination.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pagination.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +196,8 @@
       <workItem from="1581945129433" duration="171000" />
       <workItem from="1581945302874" duration="1652000" />
       <workItem from="1581925815229" duration="10831000" />
-      <workItem from="1581938046442" duration="4443000" />
+      <workItem from="1581938046442" duration="4518000" />
+      <workItem from="1581943058595" duration="1625000" />
     </task>
     <task id="LOCAL-00001" summary="Creació de les entitats.">
       <created>1580901605954</created>
@@ -250,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581960994756</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Filtro en la pagina de Forum.">
+      <created>1581964410305</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1581964410305</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +270,8 @@
     <MESSAGE value="Se configura la pagina de forum." />
     <MESSAGE value="Se configura la pagina de topic." />
     <MESSAGE value="Paginacion en la pagina de Forum." />
-    <option name="LAST_COMMIT_MESSAGE" value="Paginacion en la pagina de Forum." />
+    <MESSAGE value="Filtro en la pagina de Forum." />
+    <option name="LAST_COMMIT_MESSAGE" value="Filtro en la pagina de Forum." />
   </component>
   <component name="WindowStateProjectService">
     <state x="478" y="28" width="948" height="1023" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581964355903">
@@ -276,18 +282,18 @@
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="693" y="298" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1581964015625" />
-    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2" timestamp="1581960993904">
+    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2" timestamp="1581964410132">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2/0.28.1920.1024@0.28.1920.1024" timestamp="1581960993904" />
+    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2/0.28.1920.1024@0.28.1920.1024" timestamp="1581964410132" />
     <state x="738" y="283" width="426" height="512" key="FileChooserDialogImpl" timestamp="1581945774018">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="738" y="283" width="426" height="512" key="FileChooserDialogImpl/0.28.1920.1024@0.28.1920.1024" timestamp="1581945774018" />
-    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2" timestamp="1581954369122">
+    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2" timestamp="1581964424820">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2/0.28.1920.1024@0.28.1920.1024" timestamp="1581954369122" />
+    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2/0.28.1920.1024@0.28.1920.1024" timestamp="1581964424820" />
     <state x="526" y="137" width="859" height="805" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1581963715777">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>

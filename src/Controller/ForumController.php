@@ -5,7 +5,6 @@ namespace App\Controller;
 use App\Entity\Forum;
 use App\Entity\Topic;
 use App\Form\FilterTopicType;
-use App\Form\ForumType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -66,9 +65,9 @@ class ForumController extends AbstractController
             'forum' => $forum,
             'topics' => $topics,
             'title' => "Foro Programacion • " . $forum->getTitle(),
-            'filterForm' => $form->createView(),
-//            'query' => $request->query->all(),
-            'target_dir' => "/img/"
+            'target_dir' => "/img/",
+            'filterTopicForm' => $form->createView(),
+            'query' => $request->query->all()
         ]);
     }
 

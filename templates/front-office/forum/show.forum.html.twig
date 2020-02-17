@@ -1,20 +1,20 @@
-{% extends "front-office/user/user.twig" %}
+{% extends "front-office/forum/forum.html.twig" %}
 {% block title %}
     {{ title }}
 {% endblock %}
 {% block body %}
-
+{{ dump(forum) }}
     {% if forum %}
     <div class="page-header">
         <h2>{{ forum.title }}</h2>
         <p>{{ forum.description }}</p>
     </div>
     {% endif %}
-    {% if userTopic %}
+    {#{% if userTopic %}
     <div class="page-header">
         <h2>{{ userTopic.userName }}</h2>
     </div>
-    {% endif %}
+    {% endif %}#}
 
     <div>
         <!-- NOTE: remove the style="display: none" when you want to have the forum description on the forum body -->
@@ -88,7 +88,7 @@
             </div>
         </div>
 
-        <div class="col-md-3 col-xs-12 pull-right">
+        {#<div class="col-md-3 col-xs-12 pull-right">
             <form
                     action="{% if forum %}
                             {{ router.generateURL('Forum', 'getForum', {id_category: forum.idCategory, id_forum: forum.idForum}, {page: page}) }}
@@ -121,10 +121,10 @@
 					</span>
 
             </form>
-        </div>
+        </div>#}
 
 
-        <div class="col-md-6 col-xs-12">
+        {#<div class="col-md-6 col-xs-12">
             <p> Numero de Topics: {{ topicCount }}
                 {% if search %}
             <p> Busqueda: {{ search }} </p>
@@ -136,7 +136,7 @@
             <p> Fecha Fin: {{ dateFin }} </p>
             {% endif %}
 
-        </div>
+        </div>#}
     </div>
 
     <div class="forumbg table-responsive ">
@@ -151,13 +151,13 @@
             </thead>
             <tbody class="topiclist topics">
 
-            {% for topic in topics %}
+            {% for topic in forum.topic %}
             <tr class="t-row">
                 <td class="topic-name " title="No unread posts">
                     <div class="pull-left forum-topic-icon">
 								<span>
 {#                                    <?php if (!isset($forum)) $forum = $forumModel->getForumById($topic->getIdForum()); ?>#}
-                                    <a href="{{ router.generateURL('Topic', 'getTopic', {id_category: forum.idCategory, id_forum: topic.idForum, id_topic: topic.idTopic}) }}"
+                                    <a href="{#{{ router.generateURL('Topic', 'getTopic', {id_category: forum.idCategory, id_forum: topic.idForum, id_topic: topic.idTopic}) }}#}"
                                        class="btn btn-default btn-lg tooltip-link">
                                         <div class="">
                                             <img width="32" height="32"
@@ -169,49 +169,38 @@
                     <div class="pull-right topic-pagination">
                         <div class="btn-group pagination-line">
                             <a class="btn btn-default btn-xs tooltip-link"
-                               href="{{ router.generateURL('Topic', 'getTopic', {id_category: forum.idCategory, id_forum: topic.idForum, id_topic: topic.idTopic}) }}"
+                               href="{#{{ router.generateURL('Topic', 'getTopic', {id_category: forum.idCategory, id_forum: topic.idForum, id_topic: topic.idTopic}) }}#}"
                                title="Last post"><i class="fa fa-angle-double-right"></i></a>
                         </div>
                     </div>
                     <div class="forum-topic-icon-mobile">
                         <i class="fa fa-file-text-o"></i>
                     </div>
-                    <a href="{{ router.generateURL('Topic', 'getTopic', {id_category: forum.idCategory, id_forum: topic.idForum, id_topic: topic.idTopic}) }}"
+                    <a href="{#{{ router.generateURL('Topic', 'getTopic', {id_category: forum.idCategory, id_forum: topic.idForum, id_topic: topic.idTopic}) }}#}"
                        class="topictitle">
                         <strong>{{ topic.title }}</strong>
                     </a>
                     <br/>
                     <small>by <a
-                                href="{{ router.generateURL('Forum', 'getForumUser', {id_user: topic.idUser}) }}">
+                                href="{#{{{ router.generateURL('Forum', 'getForumUser', {id_user: topic.idUser}) }}}#}">
                             {{ topic.user.username }}
                         </a> &raquo;
                         {{ topic.user.dateAdd|date("Y-m-d H:i") }}</small>
 
-                    {% if user %}
+                    {#{% if user %}
                     {% if user.idUser == topic.user.idUser %}
                     <a href="{{ router.generateURL('Topic', 'adminTopicEdit', {id_topic: topic.idTopic}) }}"
                     class="topictitle">
                     <strong>Editar</strong>
                     </a>
                     {% endif %}
-                    {% endif %}
+                    {% endif %}#}
                 </td>
                 <td><span class="badge">No esta implementado</span></td>
                 <td><span class="badge">No esta implementado</span></td>
                 <td><span class="badge">No esta implementado</span></td>
 
-                <!--<td class="posts">
-                    <span class="badge">1</span>
-                </td>
-                <td class="views">
-                    <span class="badge">147</span>
-                </td>
-                <td class="lastpost"><span><dfn>Last post </dfn>by <a
-                                href="./memberlist.php?style=2&amp;mode=viewprofile&amp;u=80">demo</a>
-                    <a href="./viewtopic.php?style=2&amp;f=2&amp;t=44&amp;p=109#p109"><img
-                                src="./imageset/icon_topic_latest.gif" width="11" height="9"
-                                alt="View the latest post" title="View the latest post"/></a> <br/>Mon Dec 05, 2016 7:44 am</span>
-                </td>-->
+
             </tr>
             {% endfor %}
 

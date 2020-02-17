@@ -90,6 +90,19 @@ class Forum
      */
     private $topics;
 
+    /**
+     * @var \User
+     *
+     * @ORM\ManyToOne(
+     *      targetEntity="User"
+     * )
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_user", referencedColumnName="id_user")
+     * })
+     */
+    private $user;
+
+
 
     public function getIdForum(): ?int
     {
@@ -198,5 +211,16 @@ class Forum
     public function getTopic(): Collection
     {
         return $this->topics;
+    }
+
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(User $user): void
+    {
+        $this->user = $user;
     }
 }

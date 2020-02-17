@@ -83,6 +83,20 @@ class Topic
      */
     private $idUser;
 
+
+    /**
+     * @var \User
+     *
+     * @ORM\ManyToOne(
+     *      targetEntity="User"
+     * )
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_user", referencedColumnName="id_user")
+     * })
+     */
+    private $user;
+
+
     public function getIdTopic(): ?int
     {
         return $this->idTopic;
@@ -184,5 +198,16 @@ class Topic
         return $this;
     }
 
+
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(User $user): void
+    {
+        $this->user = $user;
+    }
 
 }

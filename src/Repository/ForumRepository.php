@@ -24,13 +24,33 @@ class ForumRepository extends ServiceEntityRepository
      */
     public function findAllForum(): array{
         $query = $this->createQueryBuilder('f')
-            ->addSelect('c')
-            ->innerJoin('f.idCategory', 'c')
-            ->andwhere("c.idCategory = f.idCategory")
-            ->andwhere("c.active = 1")
-            ->orderBy('c.dateAdd', 'DESC')
+            ->addSelect('t', 'u')
+            ->where("f.active = 1")
+            ->innerJoin('f.topics', 't')
+            ->innerJoin('f.user', 'u')
+            ->andwhere("f.idForum = t.idForum")
+            ->andwhere("f.idUser = u.idUser")
+            ->orderBy('f.dateAdd', 'DESC')
             ->getQuery();
 
         return $query->getResult();
     }
+
+    /**
+     * @return Forum
+     */
+    public function findbyForum(string $idForum): array{
+        $query = $this->createQueryBuilder('f')
+            ->addSelect('t', 'u')
+            ->innerJoin('f.topics', 't')
+            ->innerJoin('f.user', 'u')
+            ->where("f.idForum = :id_forum")
+            ->andwhere("f.idForum = t.idForum")
+            ->andwhere("f.idUser = u.idUser")
+            ->setParameter('id_forum', $idForum)
+            ->getQuery();
+
+        return $query->getResult();
+    }
+
 }

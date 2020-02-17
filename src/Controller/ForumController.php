@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Category;
 use App\Entity\Forum;
 use App\Form\ForumType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -28,13 +29,21 @@ class ForumController extends AbstractController
         ]);
     }
 
+
     /**
      * @Route("/{idForum}", name="forum_show", methods={"GET"})
      */
     public function show(Forum $forum): Response
     {
-        return $this->render('forum/show.html.twig', [
+        $forum = $this->getDoctrine()
+            ->getRepository(Forum::class)
+            ->findbyForum($forum->getIdForum())[0];
+
+
+        return $this->render('front-office/forum/show.forum.html.twig', [
             'forum' => $forum,
+            'title' => "Foro Programacion • " . $forum->getTitle(),
+            'target_dir' => "/img/"
         ]);
     }
 
@@ -62,6 +71,15 @@ class ForumController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/{idForum}", name="forum_show", methods={"GET"})
+     */
+    /*public function show(Forum $forum): Response
+    {
+        return $this->render('forum/show.html.twig', [
+            'forum' => $forum,
+        ]);
+    }*/
 
     /**
      * @Route("/{idForum}/edit", name="forum_edit", methods={"GET","POST"})

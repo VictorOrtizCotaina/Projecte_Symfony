@@ -223,14 +223,6 @@ $(document).ready(function() {
     });
 
     // Update notification function
-    $.ajax('http://comboot.io/version.php').success(function (data) {
-        $version = data.latestVersion;
-        $message = data.message;
-        if ($version > '1.0') {
-            $('#update-notification').show();
-            $('#update-notification .version').text($version);
-        }
-    });
 });
 
 $(document).on('click', '.panel-heading span.clickable', function(e){

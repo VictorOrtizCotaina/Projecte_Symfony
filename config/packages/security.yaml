@@ -1,6 +1,19 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    encoders:
+        # use your user class name here
+        App\Entity\User:
+            # Use native password encoder
+            # This value auto-selects the best possible hashing algorithm
+            # (i.e. Sodium when available).
+            algorithm: auto
     providers:
+        users:
+            entity:
+                # the class of the entity that represents users
+                class: 'App\Entity\User'
+                # the property to query by - e.g. username, email, etc
+                property: 'email'
         in_memory: { memory: null }
     firewalls:
         dev:

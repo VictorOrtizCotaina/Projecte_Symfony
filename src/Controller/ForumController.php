@@ -6,9 +6,13 @@ use App\Entity\Forum;
 use App\Entity\Topic;
 use App\Form\FilterTopicType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\VarDumper\VarDumper;
 
 /**
  * @Route("/forum")
@@ -39,7 +43,6 @@ class ForumController extends AbstractController
         $text = null;
         $startDate = null;
         $endDate = null;
-        $tag = null;
         $idForum = $forum->getIdForum();
 
         $forum = $this->getDoctrine()

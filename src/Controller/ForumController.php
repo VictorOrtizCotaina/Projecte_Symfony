@@ -61,7 +61,7 @@ class ForumController extends AbstractController
             ->findAllTopicbyForum($idForum, $page, $text, $startDate, $endDate);
 
         $topicFilter = $request->query->all();
-        if ($request->query->all()["topic_filter"]){
+        if (!empty($request->query->all()["topic_filter"])){
             $topicFilter = $request->query->all()["topic_filter"];
         }
         $query = ["topic_filter" => $topicFilter, "idForum" => $forum->getIdForum()];

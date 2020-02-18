@@ -60,6 +60,11 @@ class ForumController extends AbstractController
             ->getRepository(Topic::class)
             ->findAllTopicbyForum($idForum, $page, $text, $startDate, $endDate);
 
+        $topicFilter = $request->query->all();
+        if ($request->query->all()["topic_filter"]){
+            $topicFilter = $request->query->all()["topic_filter"];
+        }
+        $query = ["topic_filter" => $topicFilter, "idForum" => $forum->getIdForum()];
 
         return $this->render('front-office/forum/show.forum.html.twig', [
             'forum' => $forum,
@@ -67,7 +72,7 @@ class ForumController extends AbstractController
             'title' => "Foro Programacion • " . $forum->getTitle(),
             'target_dir' => "/img/",
             'TopicfilterForm' => $form->createView(),
-            'query' => $request->query->all()
+            'query' => $query,
         ]);
     }
 

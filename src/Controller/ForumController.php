@@ -4,15 +4,12 @@ namespace App\Controller;
 
 use App\Entity\Forum;
 use App\Entity\Topic;
-use App\Form\FilterTopicType;
+use App\Form\ForumType;
+use App\Form\TopicFilterType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\VarDumper\VarDumper;
 
 /**
  * @Route("/forum")
@@ -50,7 +47,7 @@ class ForumController extends AbstractController
             ->findbyForum($idForum);
 
 
-        $form = $this->createForm(FilterTopicType::class);
+        $form = $this->createForm(TopicFilterType::class);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -69,7 +66,7 @@ class ForumController extends AbstractController
             'topics' => $topics,
             'title' => "Foro Programacion • " . $forum->getTitle(),
             'target_dir' => "/img/",
-            'filterTopicForm' => $form->createView(),
+            'TopicfilterForm' => $form->createView(),
             'query' => $request->query->all()
         ]);
     }

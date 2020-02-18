@@ -35,7 +35,7 @@ class TopicRepository extends ServiceEntityRepository
                 ->setParameter('text', '%'.$text.'%');
         }
         if (null != $startDate && null != $endDate) {
-            $query->andWhere('t.date_add between :startDate and :endDate')
+            $query->andWhere('t.dateAdd between :startDate and :endDate')
                 ->setParameter('startDate', $startDate)
                 ->setParameter('endDate', $endDate);
         }

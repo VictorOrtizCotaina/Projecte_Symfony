@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd4713ce-482e-490f-9ead-aa4d1327ceb7" name="Default Changelist" comment="Filtro en la pagina de Forum.">
-      <change afterPath="$PROJECT_DIR$/dump.html" afterDir="false" />
+    <list default="true" id="dd4713ce-482e-490f-9ead-aa4d1327ceb7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/comboot/comboot.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/theme/comboot/comboot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/theme/comboot/angular.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/theme/comboot/angular.min.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ForumController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ForumController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/FilterTopicType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/TopicFilterType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/TopicRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/TopicRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front-office/forum/show.forum.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/forum/show.forum.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/head.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/head.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +173,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Form" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -202,8 +205,13 @@
       <workItem from="1581945302874" duration="1652000" />
       <workItem from="1581925815229" duration="10831000" />
       <workItem from="1581938046442" duration="4518000" />
-      <workItem from="1581943058595" duration="1625000" />
-      <workItem from="1581960391405" duration="5733000" />
+      <workItem from="1581943058595" duration="1879000" />
+      <workItem from="1581966583871" duration="10000" />
+      <workItem from="1582031255530" duration="139000" />
+      <workItem from="1582031413083" duration="226000" />
+      <workItem from="1582031646295" duration="636000" />
+      <workItem from="1582032286249" duration="3036000" />
+      <workItem from="1582038782113" duration="5104000" />
     </task>
     <task id="LOCAL-00001" summary="Creació de les entitats.">
       <created>1580901605954</created>
@@ -261,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581964410305</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Filtro en la pagina de Forum.">
+      <created>1581966516672</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1581966516672</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,43 +295,46 @@
     <option name="LAST_COMMIT_MESSAGE" value="Filtro en la pagina de Forum." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="643" y="268" width="626" height="543" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1582031389221">
+      <screen x="0" y="28" width="1920" height="1024" />
+    </state>
+    <state x="643" y="268" width="626" height="543" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1582031389221" />
     <state x="478" y="28" width="948" height="1023" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581964355903">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="478" y="28" width="948" height="1023" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1581964355903" />
-    <state x="693" y="274" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581967127558">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="693" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581967127558" />
-    <state x="693" y="298" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1581964015625" />
-    <state x="525" y="109" width="862" height="810" key="CommitChangelistDialog2" timestamp="1581968010616">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="525" y="109" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581968010616" />
-    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2/0.28.1920.1024@0.28.1920.1024" timestamp="1581964410132" />
-    <state x="738" y="259" width="426" height="512" key="FileChooserDialogImpl" timestamp="1581963705612">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="738" y="259" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581963705612" />
-    <state x="738" y="283" width="426" height="512" key="FileChooserDialogImpl/0.28.1920.1024@0.28.1920.1024" timestamp="1581945774018" />
-    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2" timestamp="1581964424820">
+    <state x="693" y="298" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582033086499">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2/0.28.1920.1024@0.28.1920.1024" timestamp="1581964424820" />
+    <state x="693" y="298" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1582033086499" />
+    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2" timestamp="1581966515914">
+      <screen x="0" y="28" width="1920" height="1024" />
+    </state>
+    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2/0.28.1920.1024@0.28.1920.1024" timestamp="1581966515914" />
+    <state x="738" y="283" width="426" height="512" key="FileChooserDialogImpl" timestamp="1581945774018">
+      <screen x="0" y="28" width="1920" height="1024" />
+    </state>
+    <state x="738" y="283" width="426" height="512" key="FileChooserDialogImpl/0.28.1920.1024@0.28.1920.1024" timestamp="1581945774018" />
+    <state x="690" y="354" width="531" height="372" key="NewPhpClassDialog" timestamp="1582033063732">
+      <screen x="0" y="28" width="1920" height="1024" />
+    </state>
+    <state x="690" y="354" width="531" height="372" key="NewPhpClassDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1582033063732" />
+    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2" timestamp="1581966591992">
+      <screen x="0" y="28" width="1920" height="1024" />
+    </state>
+    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2/0.28.1920.1024@0.28.1920.1024" timestamp="1581966591992" />
     <state x="526" y="137" width="859" height="805" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1581963715777">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="526" y="137" width="859" height="805" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.28.1920.1024@0.28.1920.1024" timestamp="1581963715777" />
-    <state x="605" y="226" width="709" height="588" key="find.popup" timestamp="1581966105861">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="605" y="251" width="736" height="578" key="find.popup" timestamp="1582042410966">
+      <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="605" y="226" width="709" height="588" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581966105861" />
-    <state x="605" y="251" width="709" height="578" key="find.popup/0.28.1920.1024@0.28.1920.1024" timestamp="1581598520808" />
-    <state x="577" y="311" width="757" height="412" key="git4idea.merge.GitPullDialog" timestamp="1581963107324">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="605" y="251" width="736" height="578" key="find.popup/0.28.1920.1024@0.28.1920.1024" timestamp="1582042410966" />
+    <state x="577" y="334" width="757" height="412" key="git4idea.merge.GitPullDialog" timestamp="1582031424293">
+      <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="577" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581963107324" />
-    <state x="577" y="334" width="757" height="412" key="git4idea.merge.GitPullDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1581945219507" />
+    <state x="577" y="334" width="757" height="412" key="git4idea.merge.GitPullDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1582031424293" />
     <state x="623" y="253" width="672" height="678" key="search.everywhere.popup" timestamp="1581963934885">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>

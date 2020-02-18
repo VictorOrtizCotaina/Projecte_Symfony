@@ -31,26 +31,26 @@
         <div class="col-md-3 col-xs-12"></div>
         <div class="col-md-6 text-center col-xs-12">
             <div class="btn-group forum-pagination">
-                {{ include('./pagination.html.twig', {paginator : topics, query: {'idForum' : forum.idForum} | merge(query), router_name: 'forum_show_paginated'}) }}
+                {{ include('./pagination.html.twig', {paginator : topics, query: {'idForum' : forum.idForum, topic_filter : query.topic_filter}, router_name: 'forum_show_paginated'}) }}
             </div>
         </div>
 
         <div class="col-md-3 col-xs-12 pull-right">
             <div class="col">
-                {{ form_start(filterTopicForm) }}
+                {{ form_start(TopicfilterForm) }}
                 <div class="row">
-                    {{ form_row(filterTopicForm.text) }}
+                    {{ form_row(TopicfilterForm.text) }}
                 </div>
                 <div class="row">
                     <div class="col">
-                        {{ form_row(filterTopicForm.startDate) }}
+                        {{ form_row(TopicfilterForm.startDate) }}
                     </div>
                     <div class="col">
-                        {{ form_row(filterTopicForm.endDate) }}
+                        {{ form_row(TopicfilterForm.endDate) }}
                     </div>
                 </div>
-                {{ form_widget(filterTopicForm) }}
-                {{ form_end(filterTopicForm) }}
+                {{ form_widget(TopicfilterForm) }}
+                {{ form_end(TopicfilterForm) }}
             </div>
         </div>
 

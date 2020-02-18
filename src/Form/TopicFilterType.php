@@ -9,7 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class FilterTopicType extends AbstractType
+class TopicFilterType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -17,12 +17,13 @@ class FilterTopicType extends AbstractType
             ->add('text', TextType::class, ['required' => false,])
             ->add('startDate', DateType::class, ['widget' => 'single_text', 'required' => false,])
             ->add('endDate', DateType::class, ['widget' => 'single_text', 'required' => false,])
-            ->add('filter', SubmitType::class)->setMethod('GET')
-        ;
+            ->add('filter', SubmitType::class)
+            ->setMethod('GET');
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
         ]);
-    }}
+    }
+}

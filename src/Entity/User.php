@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * User
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="user", indexes={@ORM\Index(name="fk_User_User_Group1_idx", columns={"id_user_group"})})
  * @ORM\Entity
  */
-class User
+class User implements UserInterface
 {
     /**
      * @var int
@@ -22,25 +23,25 @@ class User
     private $idUser;
 
     /**
-     * @var string|null
+     * @var string
      *
-     * @ORM\Column(name="username", type="string", length=150, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="username", type="string", length=150)
      */
-    private $username = 'NULL';
+    private $username;
 
     /**
-     * @var string|null
+     * @var string
      *
-     * @ORM\Column(name="password", type="string", length=100, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="password", type="string", length=255)
      */
-    private $password = 'NULL';
+    private $password;
 
     /**
-     * @var string|null
+     * @var string
      *
-     * @ORM\Column(name="email", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="email", type="string", length=255)
      */
-    private $email = 'NULL';
+    private $email;
 
     /**
      * @var string
@@ -239,4 +240,18 @@ class User
     }
 
 
+    public function getSalt() :?string {
+        return null;
+    }
+
+    public function eraseCredentials(){
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getRoles()
+    {
+        return array('ROLE_USER');
+    }
 }

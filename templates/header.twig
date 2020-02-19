@@ -5,38 +5,37 @@
             <div id="search-menu">
                 <a class="navbar-brand" href="{{ path('home') }}">Foro Programacion</a>
 
-                {#{% if not session.user %}
+                {% if app.user is empty %}
                     <a class="btn navbar-form navbar-left ng-pristine ng-valid"
-                       href="{{ router.generateURL('User', 'login') }}">
+                       href="{{ path('login') }}">
                         <i class="fa fa-user"></i>
-                        {% trans "Iniciar Sesión" %}
+                        Iniciar Sesión
                     </a>
                     <a class="btn navbar-form navbar-left ng-pristine ng-valid"
-                       href="{{ router.generateURL('User', 'register') }}">
+                       href="{#{{ path('register') }}#}">
                         <i class="fa fa-user-plus"></i>
-                        {% trans "Registro" %}
+                        Registro
                     </a>
-                {% endif %}
 
-                {% if session.user %}
+                {% else %}
                     <a class="navbar-form navbar-left ng-pristine ng-valid"
-                       href="{{ router.generateURL('User', 'getUser') }}">
-                        {{ user.username }}
+                       href="{#{{ router.generateURL('User', 'getUser') }}#}">
+                        {{ app.user.username }}
                     </a>
 
-                    {% if session.user %}
+                    {% if app.user %}
                         <a class="navbar-form navbar-left ng-pristine ng-valid"
-                           href="{{ router.generateURL('Category', 'getAdminCategory') }}">
+                           href="{#{{ router.generateURL('Category', 'getAdminCategory') }}#}">
                             Back-Office
                         </a>
                     {% endif %}
 
-                    <a class="btn navbar-form navbar-left ng-pristine ng-valid" href="{{ router.generateURL('User', 'logout') }}">
+                    <a class="btn navbar-form navbar-left ng-pristine ng-valid" href="{{ path('logout') }}">
                         <i class="fas fa-power-off"></i>
-                        {% trans "Cerrar Sesión" %}
+                        Cerrar Sesión
                     </a>
                 {% endif %}
-
+{#
                 {% for categoryNavbar in categoriesNavbar %}
                     <div class="btn-group">
                         <div class="btn-group dropright">

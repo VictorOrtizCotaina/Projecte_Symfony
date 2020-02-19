@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd4713ce-482e-490f-9ead-aa4d1327ceb7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
+    <list default="true" id="dd4713ce-482e-490f-9ead-aa4d1327ceb7" name="Default Changelist" comment="Filtro en la pagina de Forum.">
+      <change afterPath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/test/swiftmailer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/EmailController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200219165011.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200219165149.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front-office/email/email.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front-office/email/email_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front-office/email/show.email_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Projecte_Symfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projecte_Symfony.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front-office/login/show.login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/login/show.login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front-office/register/register.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/register/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front-office/register/show.register.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/register/show.register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +47,13 @@
     <expand />
     <select />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -47,8 +66,6 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
-      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
@@ -154,6 +171,12 @@
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/vendor/psr/link" />
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/webimpress/safe-writer" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XKpoxD2CQsSoBaBUNza51oB7iO" />
@@ -167,18 +190,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/front-office/email" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\Projecte_Symfony\templates\front-office\email" />
+      <recent name="D:\xampp\htdocs\Projecte_Symfony\src\Controller" />
       <recent name="$PROJECT_DIR$/src/Controller" />
       <recent name="$PROJECT_DIR$/src/Form" />
       <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/Repository" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -209,6 +233,7 @@
       <workItem from="1582031646295" duration="636000" />
       <workItem from="1582032286249" duration="3036000" />
       <workItem from="1582038782113" duration="5903000" />
+      <workItem from="1582132404315" duration="5268000" />
     </task>
     <task id="LOCAL-00001" summary="Creació de les entitats.">
       <created>1580901605954</created>
@@ -315,9 +340,10 @@
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="478" y="28" width="948" height="1023" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1581964355903" />
-    <state x="693" y="298" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582122400125">
-      <screen x="0" y="28" width="1920" height="1024" />
+    <state x="693" y="274" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582146123772">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="693" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1582146123772" />
     <state x="693" y="298" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1582122400125" />
     <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2" timestamp="1582129267684">
       <screen x="0" y="28" width="1920" height="1024" />
@@ -331,9 +357,10 @@
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="738" y="283" width="426" height="512" key="FileChooserDialogImpl/0.28.1920.1024@0.28.1920.1024" timestamp="1581945774018" />
-    <state x="690" y="354" width="531" height="372" key="NewPhpClassDialog" timestamp="1582033063732">
-      <screen x="0" y="28" width="1920" height="1024" />
+    <state x="690" y="331" width="531" height="372" key="NewPhpClassDialog" timestamp="1582145550802">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="690" y="331" key="NewPhpClassDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1582145550802" />
     <state x="690" y="354" width="531" height="372" key="NewPhpClassDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1582033063732" />
     <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2" timestamp="1582129518222">
       <screen x="0" y="28" width="1920" height="1024" />

@@ -25,21 +25,21 @@ class User implements UserInterface
     /**
      * @var string
      *
-     * @ORM\Column(name="username", type="string", length=150)
+     * @ORM\Column(name="username", type="string", length=150, nullable=false)
      */
     private $username;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="password", type="string", length=255)
+     * @ORM\Column(name="password", type="string", length=255, nullable=false)
      */
     private $password;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=255)
+     * @ORM\Column(name="email", type="string", length=255, nullable=false)
      */
     private $email;
 
@@ -65,11 +65,11 @@ class User implements UserInterface
     private $province;
 
     /**
-     * @var string|null
+     * @var string
      *
-     * @ORM\Column(name="lang", type="string", length=30, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="lang", type="string", length=30, nullable=false, options={"default"="ES"})
      */
-    private $lang = 'NULL';
+    private $lang = 'ES';
 
     /**
      * @var string|null

@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd4713ce-482e-490f-9ead-aa4d1327ceb7" name="Default Changelist" comment="Filtro en la pagina de Forum.">
-      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="dd4713ce-482e-490f-9ead-aa4d1327ceb7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front-office/login/login.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/login/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front-office/login/show.login.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/login/show.login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front-office/login/show.login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/login/show.login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front-office/register/register.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/register/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front-office/register/show.register.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front-office/register/show.register.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,13 +169,13 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Form" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Form" />
       <recent name="$PROJECT_DIR$/src/Controller" />
+      <recent name="$PROJECT_DIR$/src/Form" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/Repository" />
@@ -284,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582044821607</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Implementació de la seguretat.">
+      <created>1582129267972</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1582129267972</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +303,8 @@
     <MESSAGE value="Se configura la pagina de topic." />
     <MESSAGE value="Paginacion en la pagina de Forum." />
     <MESSAGE value="Filtro en la pagina de Forum." />
-    <option name="LAST_COMMIT_MESSAGE" value="Filtro en la pagina de Forum." />
+    <MESSAGE value="Implementació de la seguretat." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementació de la seguretat." />
   </component>
   <component name="WindowStateProjectService">
     <state x="643" y="268" width="626" height="543" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1582031389221">
@@ -315,10 +319,10 @@
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="693" y="298" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1582122400125" />
-    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2" timestamp="1582124885336">
+    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2" timestamp="1582129267684">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2/0.28.1920.1024@0.28.1920.1024" timestamp="1582124885336" />
+    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2/0.28.1920.1024@0.28.1920.1024" timestamp="1582129267684" />
     <state x="183" y="116" width="1538" height="848" key="DiffContextDialog" timestamp="1582119023421">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
@@ -331,18 +335,18 @@
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="690" y="354" width="531" height="372" key="NewPhpClassDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1582033063732" />
-    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2" timestamp="1582044827517">
+    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2" timestamp="1582129518222">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2/0.28.1920.1024@0.28.1920.1024" timestamp="1582044827517" />
+    <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2/0.28.1920.1024@0.28.1920.1024" timestamp="1582129518222" />
     <state x="526" y="137" width="859" height="805" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1581963715777">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="526" y="137" width="859" height="805" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.28.1920.1024@0.28.1920.1024" timestamp="1581963715777" />
-    <state x="605" y="251" width="736" height="578" key="find.popup" timestamp="1582125860320">
+    <state x="605" y="251" width="736" height="578" key="find.popup" timestamp="1582130197400">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="605" y="251" width="736" height="578" key="find.popup/0.28.1920.1024@0.28.1920.1024" timestamp="1582125860320" />
+    <state x="605" y="251" width="736" height="578" key="find.popup/0.28.1920.1024@0.28.1920.1024" timestamp="1582130197400" />
     <state x="577" y="334" width="757" height="412" key="git4idea.merge.GitPullDialog" timestamp="1582031424293">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>

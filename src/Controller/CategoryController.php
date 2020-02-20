@@ -29,9 +29,9 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @Route("/{idCategory}", name="category_show", methods={"GET"})
+     * @Route("/view/{idCategory}", name="category_view", methods={"GET"})
      */
-    public function show(Category $category): Response
+    public function view(Category $category): Response
     {
         return $this->render('front-office/category/show.category.html.twig', [
             'category' => $category,
@@ -60,6 +60,16 @@ class CategoryController extends AbstractController
         return $this->render('category/new.html.twig', [
             'category' => $category,
             'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/show/{idCategory}", name="category_show", methods={"GET"})
+     */
+    public function show(Category $category): Response
+    {
+        return $this->render('category/show.html.twig', [
+            'category' => $category,
         ]);
     }
 

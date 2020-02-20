@@ -32,7 +32,7 @@ class ForumController extends AbstractController
 
 
     /**
-     * @Route("/{idForum}", defaults={"page": "1"}, name="forum_view", methods={"GET"})
+     * @Route("/view/{idForum}", defaults={"page": "1"}, name="forum_view", methods={"GET"})
      * @Route("/{idForum}/page/{page<[1-9]\d*>}", methods="GET", name="forum_view_paginated")
      */
     public function view(Forum $forum, Request $request, int $page): Response

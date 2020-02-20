@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Category;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -15,7 +16,7 @@ class CategoryType extends AbstractType
             ->add('title')
             ->add('description')
             ->add('image')
-            ->add('dateAdd')
+            ->add('dateAdd', DateType::class, ['widget' => 'single_text'])
             ->add('active')
             ->add('idUser')
         ;

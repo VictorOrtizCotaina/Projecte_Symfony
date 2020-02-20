@@ -47,7 +47,7 @@ class Post
      *
      * @ORM\Column(name="date_add", type="datetime", nullable=true, options={"default"="NULL"})
      */
-    private $dateAdd = 'NULL';
+    private $dateAdd;
 
     /**
      * @var bool
@@ -190,4 +190,8 @@ class Post
         $this->user = $user;
     }
 
+
+    public function __toString() {
+        return $this->getTitle();
+    }
 }

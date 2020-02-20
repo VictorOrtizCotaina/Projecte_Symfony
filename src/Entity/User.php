@@ -254,4 +254,9 @@ class User implements UserInterface
     {
         return array('ROLE_USER');
     }
+
+
+    public function __toString() {
+        return $this->getUsername();
+    }
 }

@@ -49,7 +49,7 @@ class Forum
      *
      * @ORM\Column(name="date_add", type="datetime", nullable=true, options={"default"="NULL"})
      */
-    private $dateAdd = 'NULL';
+    private $dateAdd;
 
     /**
      * @var bool
@@ -223,5 +223,10 @@ class Forum
     public function setUser(User $user): void
     {
         $this->user = $user;
+    }
+
+
+    public function __toString() {
+        return $this->getTitle();
     }
 }

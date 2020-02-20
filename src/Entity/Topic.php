@@ -48,7 +48,7 @@ class Topic
      *
      * @ORM\Column(name="date_add", type="datetime", nullable=true, options={"default"="NULL"})
      */
-    private $dateAdd = 'NULL';
+    private $dateAdd;
 
     /**
      * @var int|null
@@ -241,4 +241,8 @@ class Topic
         $this->user = $user;
     }
 
+
+    public function __toString() {
+        return $this->getTitle();
+    }
 }

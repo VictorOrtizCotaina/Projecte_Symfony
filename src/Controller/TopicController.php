@@ -30,7 +30,7 @@ class TopicController extends AbstractController
 
 
     /**
-     * @Route("//{idTopic}", name="topic_view", methods={"GET"})
+     * @Route("/view/{idTopic}", name="topic_view", methods={"GET"})
      */
     public function view(Topic $topic): Response
     {
@@ -71,7 +71,7 @@ class TopicController extends AbstractController
     }
 
     /**
-     * @Route("/{idTopic}/show", name="topic_show", methods={"GET"})
+     * @Route("/show/{idTopic}", name="topic_show", methods={"GET"})
      */
     public function show(Topic $topic): Response
     {
@@ -81,7 +81,7 @@ class TopicController extends AbstractController
     }
 
     /**
-     * @Route("/{idTopic}/edit", name="topic_edit", methods={"GET","POST"})
+     * @Route("/edit/{idTopic}", name="topic_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Topic $topic): Response
     {

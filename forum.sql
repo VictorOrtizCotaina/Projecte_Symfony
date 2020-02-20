@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-02-2020 a las 22:22:18
+-- Tiempo de generación: 20-02-2020 a las 23:17:28
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.1
 
@@ -40,8 +40,8 @@ CREATE TABLE `category` (
   `date_add` datetime DEFAULT NULL,
   `active` tinyint(1) NOT NULL DEFAULT 1,
   `id_user` int(11) DEFAULT NULL,
-  `image_name` varchar(255) NOT NULL,
-  `image_size` int(11) NOT NULL
+  `image_name` varchar(255) DEFAULT NULL,
+  `image_size` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -50,7 +50,7 @@ CREATE TABLE `category` (
 
 INSERT INTO `category` (`id_category`, `title`, `description`, `image`, `date_add`, `active`, `id_user`, `image_name`, `image_size`) VALUES
 (1, 'Php', 'Categoría para php.', 'icon-folder.png', '2019-09-10 00:00:00', 1, 1, 'icon-folder-5e4ee5e1e36ad666579232.png', 559),
-(4, 'prueba', 'prueba', 'icon-folder.png', '2019-11-16 00:00:00', 1, 1, '', 0);
+(4, 'prueba', 'prueba', 'icon-folder.png', '2019-11-16 00:00:00', 1, 2, '', 0);
 
 -- --------------------------------------------------------
 
@@ -67,8 +67,8 @@ CREATE TABLE `forum` (
   `active` tinyint(1) NOT NULL DEFAULT 1,
   `id_category` int(11) DEFAULT NULL,
   `id_user` int(11) DEFAULT NULL,
-  `image_name` varchar(255) NOT NULL,
-  `image_size` int(11) NOT NULL
+  `image_name` varchar(255) DEFAULT NULL,
+  `image_size` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -78,7 +78,7 @@ CREATE TABLE `forum` (
 INSERT INTO `forum` (`id_forum`, `title`, `description`, `image`, `date_add`, `active`, `id_category`, `id_user`, `image_name`, `image_size`) VALUES
 (1, 'Clases', 'Categoría para php.', 'icon-folder.png', '2019-09-10 00:00:00', 1, 1, 1, 'icon-folder-5e4ee5cd97509269328014.png', 559),
 (2, 'Bases de Datos', 'Foro para las dudas que se puedan tener sobre la Base de Datos en php.', 'icon-folder.png', '2019-09-21 08:00:15', 1, 1, 1, '', 0),
-(3, 'prueba', 'prueba', 'icon-folder.png', '2019-11-15 08:00:15', 1, 4, 1, '', 0);
+(3, 'prueba', 'prueba', 'icon-folder.png', '2019-11-15 08:00:15', 1, 4, 2, '', 0);
 
 -- --------------------------------------------------------
 
@@ -147,8 +147,8 @@ CREATE TABLE `topic` (
   `active` tinyint(1) NOT NULL DEFAULT 1,
   `id_user` int(11) DEFAULT NULL,
   `id_forum` int(11) DEFAULT NULL,
-  `image_name` varchar(255) NOT NULL,
-  `image_size` int(11) NOT NULL
+  `image_name` varchar(255) DEFAULT NULL,
+  `image_size` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -276,7 +276,7 @@ ALTER TABLE `user_group`
 -- AUTO_INCREMENT de la tabla `category`
 --
 ALTER TABLE `category`
-  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `forum`

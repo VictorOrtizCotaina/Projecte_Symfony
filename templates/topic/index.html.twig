@@ -24,7 +24,7 @@
                 <td>{{ topic.idTopic }}</td>
                 <td>{{ topic.title }}</td>
                 <td>{{ topic.description }}</td>
-                <td>{{ topic.image }}</td>
+                <td><img src="{{ vich_uploader_asset(topic, 'imageFile') }}" alt="" /></td>
                 <td>{{ topic.dateAdd ? topic.dateAdd|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ topic.views }}</td>
                 <td>{{ topic.active ? 'Yes' : 'No' }}</td>

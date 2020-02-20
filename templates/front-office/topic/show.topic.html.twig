@@ -12,52 +12,6 @@
     </div>
 
 
-{#
-    <div class="row mobile-fix">
-
-        <div class="col-md-3 text-center col-xs-12">
-            {% if user %}
-                <input type="submit" class="btn btn-primary" name="seguir" value="Seguir Topic">
-            {% endif %}
-
-        </div>
-        <div class="col-md-6 text-center col-xs-12">
-            <div class="btn-group forum-pagination">
-                <nav aria-label="Page navigation">
-                    <ul class="pagination">
-                        {% if Previous > 0 %}
-                        <li>
-                            <a href="{{ router.generateURL('Topic', 'getTopic', {id_category: forum.idCategory, id_forum: forum.idForum, id_topic: topic.idTopic}, {num_page: Previous}) }}"
-                            aria-label="Previous">
-                            <span aria-hidden="true">&laquo; Previous</span>
-                            </a>
-                        </li>
-                        {% endif %}
-                        {% for i in 1..pages %}
-#}
-{#                        <?php for ($i = 1; $i <= $pages; $i++) : ?>#}{#
-
-                        <li>
-                            <a href="{{ router.generateURL('Topic', 'getTopic', {id_category: forum.idCategory, id_forum: forum.idForum, id_topic: topic.idTopic}, {num_page: i}) }}">{{ i }}</a>
-                        </li>
-                        {% endfor %}
-
-                        {% if Next <= pages %}
-                        <li>
-                            <a href="{{ router.generateURL('Topic', 'getTopic', {id_category: forum.idCategory, id_forum: forum.idForum, id_topic: topic.idTopic}, {num_page: Next}) }}"
-                            aria-label="Next">
-                            <span aria-hidden="true">Next &raquo;</span>
-                            </a>
-                        </li>
-                        {% endif %}
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
-    </div>
-#}
-
     {% for post in topic.posts %}
     <div>
         <div class="panel panel-primary">
@@ -116,38 +70,5 @@
     {% endfor %}
 
 
-    {#<div class="row mobile-fix">
-
-        <div class="col-md-3"></div>
-        <div class="col-md-6 text-center col-xs-12">
-            <div class="btn-group forum-pagination">
-                <nav aria-label="Page navigation">
-                    <ul class="pagination">
-                        {% if Previous > 0 %}
-                            <li>
-                                <a href="{{ router.generateURL('Topic', 'getTopic', {id_category: forum.idCategory, id_forum: forum.idForum, id_topic: topic.idTopic}, {num_page: Previous}) }}"
-                                   aria-label="Previous">
-                                    <span aria-hidden="true">&laquo; Previous</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% for i in 1..pages %}
-                            <li>
-                                <a href="{{ router.generateURL('Topic', 'getTopic', {id_category: forum.idCategory, id_forum: forum.idForum, id_topic: topic.idTopic}, {num_page: i}) }}">{{ i }}</a>
-                            </li>
-                        {% endfor %}
-
-                        {% if Next <= pages %}
-                            <li>
-                                <a href="{{ router.generateURL('Topic', 'getTopic', {id_category: forum.idCategory, id_forum: forum.idForum, id_topic: topic.idTopic}, {num_page: Next}) }}"
-                                   aria-label="Next">
-                                    <span aria-hidden="true">Next &raquo;</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                    </ul>
-                </nav>
-            </div>
-        </div>#}
 
 {% endblock %}

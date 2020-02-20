@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb" data-ng-app>
+
+{% include 'admin_head.html.twig' %}
+
+<meta charset="UTF-8">
+<title>{% block title %}Foro Programacion{% endblock %}</title>
+
+<body class="section-index ltr">
+
+{% include 'admin_header.html.twig' %}
+
+<div class="container" id="content-wrapper">
+        {% block body %}
+        {% endblock %}
+</div>
+
+{% block javascripts %}{% endblock %}
+</body>
 </html>

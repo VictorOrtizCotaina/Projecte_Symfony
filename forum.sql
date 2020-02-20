@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-02-2020 a las 20:20:27
+-- Tiempo de generación: 20-02-2020 a las 22:22:18
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.1
 
@@ -39,16 +39,18 @@ CREATE TABLE `category` (
   `image` varchar(255) DEFAULT 'icon-folder.png',
   `date_add` datetime DEFAULT NULL,
   `active` tinyint(1) NOT NULL DEFAULT 1,
-  `id_user` int(11) DEFAULT NULL
+  `id_user` int(11) DEFAULT NULL,
+  `image_name` varchar(255) NOT NULL,
+  `image_size` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `category`
 --
 
-INSERT INTO `category` (`id_category`, `title`, `description`, `image`, `date_add`, `active`, `id_user`) VALUES
-(1, 'Php', 'Categoría para php.', 'icon-folder.png', '2019-09-10 12:40:26', 1, 1),
-(4, 'prueba', 'prueba', 'icon-folder.png', '2019-11-16 00:00:00', 1, 1);
+INSERT INTO `category` (`id_category`, `title`, `description`, `image`, `date_add`, `active`, `id_user`, `image_name`, `image_size`) VALUES
+(1, 'Php', 'Categoría para php.', 'icon-folder.png', '2019-09-10 00:00:00', 1, 1, 'icon-folder-5e4ee5e1e36ad666579232.png', 559),
+(4, 'prueba', 'prueba', 'icon-folder.png', '2019-11-16 00:00:00', 1, 1, '', 0);
 
 -- --------------------------------------------------------
 
@@ -64,17 +66,19 @@ CREATE TABLE `forum` (
   `date_add` datetime DEFAULT NULL,
   `active` tinyint(1) NOT NULL DEFAULT 1,
   `id_category` int(11) DEFAULT NULL,
-  `id_user` int(11) DEFAULT NULL
+  `id_user` int(11) DEFAULT NULL,
+  `image_name` varchar(255) NOT NULL,
+  `image_size` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `forum`
 --
 
-INSERT INTO `forum` (`id_forum`, `title`, `description`, `image`, `date_add`, `active`, `id_category`, `id_user`) VALUES
-(1, 'Clases', 'Categoría para php.', 'icon-folder.png', '2019-09-10 12:40:26', 1, 1, 1),
-(2, 'Bases de Datos', 'Foro para las dudas que se puedan tener sobre la Base de Datos en php.', 'icon-folder.png', '2019-09-21 08:00:15', 1, 1, 1),
-(3, 'prueba', 'prueba', 'icon-folder.png', '2019-11-15 08:00:15', 1, 4, 1);
+INSERT INTO `forum` (`id_forum`, `title`, `description`, `image`, `date_add`, `active`, `id_category`, `id_user`, `image_name`, `image_size`) VALUES
+(1, 'Clases', 'Categoría para php.', 'icon-folder.png', '2019-09-10 00:00:00', 1, 1, 1, 'icon-folder-5e4ee5cd97509269328014.png', 559),
+(2, 'Bases de Datos', 'Foro para las dudas que se puedan tener sobre la Base de Datos en php.', 'icon-folder.png', '2019-09-21 08:00:15', 1, 1, 1, '', 0),
+(3, 'prueba', 'prueba', 'icon-folder.png', '2019-11-15 08:00:15', 1, 4, 1, '', 0);
 
 -- --------------------------------------------------------
 
@@ -96,7 +100,8 @@ INSERT INTO `migration_versions` (`version`, `executed_at`) VALUES
 ('20200219165149', '2020-02-19 16:51:59'),
 ('20200220152905', '2020-02-20 15:29:15'),
 ('20200220185829', '2020-02-20 18:58:47'),
-('20200220190227', '2020-02-20 15:29:15');
+('20200220190227', '2020-02-20 15:29:15'),
+('20200220200152', '2020-02-20 20:02:02');
 
 -- --------------------------------------------------------
 

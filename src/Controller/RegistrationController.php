@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Entity\UserGroup;
 use App\Form\RegistrationFormType;
+use App\Repository\UserGroupRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -29,6 +31,11 @@ class RegistrationController extends AbstractController
                     $form->get('password')->getData()
                 )
             );
+
+            $user->setDateAdd(new \DateTime());
+
+            $userGroup = $this->getDoctrine()->getRepository(UserGroup::class)->find(2);
+            $user->setIdUserGroup($userGroup);
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);

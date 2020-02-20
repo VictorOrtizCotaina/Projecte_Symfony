@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd4713ce-482e-490f-9ead-aa4d1327ceb7" name="Default Changelist" comment="Filtro en la pagina de Forum.">
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/swiftmailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/EmailController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200219165011.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200219165149.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/front-office/email/email.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/front-office/email/email_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/front-office/email/show.email_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Projecte_Symfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projecte_Symfony.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="dd4713ce-482e-490f-9ead-aa4d1327ceb7" name="Default Changelist" comment="Implementació de la seguretat.">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Projecte_Symfony.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,13 +39,6 @@
     </option>
     <expand />
     <select />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -177,6 +163,8 @@
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
       <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XKpoxD2CQsSoBaBUNza51oB7iO" />
@@ -190,19 +178,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/front-office/email" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Repository" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\xampp\htdocs\Projecte_Symfony\templates\front-office\email" />
-      <recent name="D:\xampp\htdocs\Projecte_Symfony\src\Controller" />
+      <recent name="$PROJECT_DIR$/src/Repository" />
       <recent name="$PROJECT_DIR$/src/Controller" />
       <recent name="$PROJECT_DIR$/src/Form" />
       <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -233,7 +220,7 @@
       <workItem from="1582031646295" duration="636000" />
       <workItem from="1582032286249" duration="3036000" />
       <workItem from="1582038782113" duration="5903000" />
-      <workItem from="1582132404315" duration="5268000" />
+      <workItem from="1582205347784" duration="2652000" />
     </task>
     <task id="LOCAL-00001" summary="Creació de les entitats.">
       <created>1580901605954</created>
@@ -340,15 +327,14 @@
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="478" y="28" width="948" height="1023" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1581964355903" />
-    <state x="693" y="274" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582146123772">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="693" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1582146123772" />
-    <state x="693" y="298" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1582122400125" />
-    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2" timestamp="1582129267684">
+    <state x="693" y="298" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582122400125">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2/0.28.1920.1024@0.28.1920.1024" timestamp="1582129267684" />
+    <state x="693" y="298" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1582122400125" />
+    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2" timestamp="1582208045720">
+      <screen x="0" y="28" width="1920" height="1024" />
+    </state>
+    <state x="525" y="135" width="862" height="810" key="CommitChangelistDialog2/0.28.1920.1024@0.28.1920.1024" timestamp="1582208045720" />
     <state x="183" y="116" width="1538" height="848" key="DiffContextDialog" timestamp="1582119023421">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
@@ -357,11 +343,18 @@
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="738" y="283" width="426" height="512" key="FileChooserDialogImpl/0.28.1920.1024@0.28.1920.1024" timestamp="1581945774018" />
-    <state x="690" y="331" width="531" height="372" key="NewPhpClassDialog" timestamp="1582145550802">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="690" y="354" width="579" height="372" key="NewPhpClassDialog" timestamp="1582206666962">
+      <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="690" y="331" key="NewPhpClassDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1582145550802" />
-    <state x="690" y="354" width="531" height="372" key="NewPhpClassDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1582033063732" />
+    <state x="690" y="354" width="579" height="372" key="NewPhpClassDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1582206666962" />
+    <state x="740" y="202" width="423" height="675" key="RollbackChangesDialog" timestamp="1582208037875">
+      <screen x="0" y="28" width="1920" height="1024" />
+    </state>
+    <state x="740" y="202" width="423" height="675" key="RollbackChangesDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1582208037875" />
+    <state x="449" y="175" key="SettingsEditor" timestamp="1582205279217">
+      <screen x="0" y="28" width="1920" height="1024" />
+    </state>
+    <state x="449" y="175" key="SettingsEditor/0.28.1920.1024@0.28.1920.1024" timestamp="1582205279216" />
     <state x="555" y="276" width="802" height="527" key="Vcs.Push.Dialog.v2" timestamp="1582129518222">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
@@ -374,10 +367,14 @@
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
     <state x="605" y="251" width="736" height="578" key="find.popup/0.28.1920.1024@0.28.1920.1024" timestamp="1582130197400" />
-    <state x="577" y="334" width="757" height="412" key="git4idea.merge.GitPullDialog" timestamp="1582031424293">
+    <state x="577" y="334" width="757" height="412" key="git4idea.merge.GitPullDialog" timestamp="1582205239302">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>
-    <state x="577" y="334" width="757" height="412" key="git4idea.merge.GitPullDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1582031424293" />
+    <state x="577" y="334" width="757" height="412" key="git4idea.merge.GitPullDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1582205239302" />
+    <state x="729" y="443" width="454" height="194" key="git4idea.ui.GitStashDialog" timestamp="1582205232857">
+      <screen x="0" y="28" width="1920" height="1024" />
+    </state>
+    <state x="729" y="443" width="454" height="194" key="git4idea.ui.GitStashDialog/0.28.1920.1024@0.28.1920.1024" timestamp="1582205232857" />
     <state x="623" y="253" width="672" height="678" key="search.everywhere.popup" timestamp="1582125450589">
       <screen x="0" y="28" width="1920" height="1024" />
     </state>

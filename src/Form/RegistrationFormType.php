@@ -22,7 +22,7 @@ class RegistrationFormType extends AbstractType
             ->add('surnames')
             ->add('email')
             ->add('province')
-            ->add('dateAdd', DateType::class, ['widget' => 'single_text'])
+            ->add('dateAdd', DateType::class, ['mapped' => false, 'data' => new \DateTime()])
             ->add('password', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller

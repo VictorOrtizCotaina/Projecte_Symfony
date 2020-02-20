@@ -13,7 +13,6 @@ class EmailController extends AbstractController
      * @Route("/contact_form", name="contact_form")
      * @param \Swift_Mailer $mailer
      * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function index(\Swift_Mailer $mailer, Request $request)
     {

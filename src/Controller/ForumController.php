@@ -21,9 +21,18 @@ class ForumController extends AbstractController
      */
     public function index(): Response
     {
-        $forums = $this->getDoctrine()
-            ->getRepository(Forum::class)
-            ->findAll();
+        $user = $this->getUser();
+        $group = $user->getIdUserGroup()->getIdUserGroup();
+
+        if ($group == 1) {
+            $forums = $this->getDoctrine()
+                ->getRepository(Forum::class)
+                ->findAll();
+        } elseif ($group == 2){
+            $forums = $this->getDoctrine()
+                ->getRepository(Forum::class)
+                ->findBy(["idUser" => $user->getIdUser()]);
+        }
 
         return $this->render('forum/index.html.twig', [
             'forums' => $forums,

@@ -41,7 +41,23 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-         - { path: ^/admin, roles: [ROLE_ADMIN, ROLE_USER] }
+        - { path: ^/admin, roles: [ROLE_ADMIN, ROLE_USER] }
+        -
+        - { path: ^/category/show/^, roles: [ROLE_ADMIN, ROLE_USER] }
+        - { path: ^/category/edit/^, roles: [ROLE_ADMIN, ROLE_USER] }
+        - { path: ^/category/new/^, roles: [ROLE_ADMIN, ROLE_USER] }
+        -
+        - { path: ^/forum/show/^, roles: [ROLE_ADMIN, ROLE_USER] }
+        - { path: ^/forum/edit/^, roles: [ROLE_ADMIN, ROLE_USER] }
+        - { path: ^/forum/new/^, roles: [ROLE_ADMIN, ROLE_USER] }
+        -
+        - { path: ^/topic/show/^, roles: [ROLE_ADMIN, ROLE_USER] }
+        - { path: ^/topic/edit/^, roles: [ROLE_ADMIN, ROLE_USER] }
+        - { path: ^/topic/new/^, roles: [ROLE_ADMIN, ROLE_USER] }
+        -
+        - { path: ^/user/show/^, roles: [ROLE_ADMIN, ROLE_USER] }
+        - { path: ^/user/edit/^, roles: [ROLE_ADMIN, ROLE_USER] }
+        - { path: ^/user/new/^, roles: [ROLE_ADMIN, ROLE_USER] }
 
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }

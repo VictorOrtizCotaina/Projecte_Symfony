@@ -19,12 +19,22 @@ class CategoryController extends AbstractController
      */
     public function index(): Response
     {
-        $categories = $this->getDoctrine()
-            ->getRepository(Category::class)
-            ->findAll();
+        $user = $this->getUser();
+        $group = $user->getIdUserGroup()->getIdUserGroup();
+
+        if ($group == 1) {
+            $categories = $this->getDoctrine()
+                ->getRepository(Category::class)
+                ->findAll();
+        } elseif ($group == 2){
+            $categories = $this->getDoctrine()
+                ->getRepository(Category::class)
+                ->findBy(["idUser" => $user->getIdUser()]);
+        }
 
         return $this->render('category/index.html.twig', [
             'categories' => $categories,
+            'user' => $user
         ]);
     }
 
@@ -74,7 +84,7 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @Route("/{idCategory}/edit", name="category_edit", methods={"GET","POST"})
+     * @Route("/edit/{idCategory}", name="category_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Category $category): Response
     {

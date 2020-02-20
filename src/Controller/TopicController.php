@@ -19,9 +19,18 @@ class TopicController extends AbstractController
      */
     public function index(): Response
     {
-        $topics = $this->getDoctrine()
-            ->getRepository(Topic::class)
-            ->findAll();
+        $user = $this->getUser();
+        $group = $user->getIdUserGroup()->getIdUserGroup();
+
+        if ($group == 1) {
+            $topics = $this->getDoctrine()
+                ->getRepository(Topic::class)
+                ->findAll();
+        } elseif ($group == 2){
+            $topics = $this->getDoctrine()
+                ->getRepository(Topic::class)
+                ->findBy(["idUser" => $user->getIdUser()]);
+        }
 
         return $this->render('topic/index.html.twig', [
             'topics' => $topics,

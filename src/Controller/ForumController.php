@@ -32,10 +32,10 @@ class ForumController extends AbstractController
 
 
     /**
-     * @Route("/{idForum}", defaults={"page": "1"}, name="forum_show", methods={"GET"})
-     * @Route("/{idForum}/page/{page<[1-9]\d*>}", methods="GET", name="forum_show_paginated")
+     * @Route("/{idForum}", defaults={"page": "1"}, name="forum_view", methods={"GET"})
+     * @Route("/{idForum}/page/{page<[1-9]\d*>}", methods="GET", name="forum_view_paginated")
      */
-    public function show(Forum $forum, Request $request, int $page): Response
+    public function view(Forum $forum, Request $request, int $page): Response
     {
         $text = null;
         $startDate = null;
@@ -101,14 +101,14 @@ class ForumController extends AbstractController
     }
 
     /**
-     * @Route("/{idForum}", name="forum_show", methods={"GET"})
+     * @Route("/show/{idForum}", name="forum_show", methods={"GET"})
      */
-    /*public function show(Forum $forum): Response
+    public function show(Forum $forum): Response
     {
         return $this->render('forum/show.html.twig', [
             'forum' => $forum,
         ]);
-    }*/
+    }
 
     /**
      * @Route("/{idForum}/edit", name="forum_edit", methods={"GET","POST"})

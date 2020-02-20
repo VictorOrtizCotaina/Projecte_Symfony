@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -58,7 +59,7 @@ class Forum
     private $active = '1';
 
     /**
-     * @var \Category
+     * @var \App\Entity\Category
      *
      * @ORM\ManyToOne(targetEntity="Category")
      * @ORM\JoinColumns({
@@ -68,7 +69,7 @@ class Forum
     private $idCategory;
 
     /**
-     * @var \User
+     * @var \App\Entity\User
      *
      * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({

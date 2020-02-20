@@ -31,7 +31,7 @@
         <div class="col-md-3 col-xs-12"></div>
         <div class="col-md-6 text-center col-xs-12">
             <div class="btn-group forum-pagination">
-                {{ include('./pagination.html.twig', {paginator : topics, query: {'idForum' : forum.idForum, topic_filter : query.topic_filter}, router_name: 'forum_show_paginated'}) }}
+                {{ include('./pagination.html.twig', {paginator : topics, query: {'idForum' : forum.idForum, topic_filter : query.topic_filter}, router_name: 'forum_view_paginated'}) }}
             </div>
         </div>
 
@@ -88,7 +88,7 @@
                     <div class="pull-left forum-topic-icon">
 								<span>
 {#                                    <?php if (!isset($forum)) $forum = $forumModel->getForumById($topic->getIdForum()); ?>#}
-                                    <a href="{{ path('topic_show', {'idTopic' : topic.idTopic}) }}"
+                                    <a href="{{ path('topic_view', {'idTopic' : topic.idTopic}) }}"
                                        class="btn btn-default btn-lg tooltip-link">
                                         <div class="">
                                             <img width="32" height="32"
@@ -107,7 +107,7 @@
                     <div class="forum-topic-icon-mobile">
                         <i class="fa fa-file-text-o"></i>
                     </div>
-                    <a href="{{ path('topic_show', {'idTopic' : topic.idTopic}) }}"
+                    <a href="{{ path('topic_view', {'idTopic' : topic.idTopic}) }}"
                        class="topictitle">
                         <strong>{{ topic.title }}</strong>
                     </a>
@@ -145,7 +145,7 @@
         <div class="col-md-3 col-xs-12"></div>
         <div class="col-md-6 text-center col-xs-12">
             <div class="btn-group forum-pagination">
-                {{ include('./pagination.html.twig', {paginator : topics, query: {'idForum' : forum.idForum}, router_name: 'forum_show_paginated'}) }}
+                {{ include('./pagination.html.twig', {paginator : topics, query: {'idForum' : forum.idForum}, router_name: 'forum_view_paginated'}) }}
             </div>
         </div>
 

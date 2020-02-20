@@ -23,7 +23,7 @@
                     <tr>
                         <td class="forum-name" title="No unread posts">
 							<span class="pull-left forum-icon">
-								<a href="{{ path('forum_show', {'idForum': forum.idForum}) }}"
+								<a href="{{ path('forum_view', {'idForum': forum.idForum}) }}"
 
                                    class="btn btn-lg btn-default tooltip-link">
                                     <div class="">
@@ -39,7 +39,7 @@
                                 <i class="fa fa-folder fa-fw"></i>
 
                             </div>
-                            <a href="{{ path('forum_show', {'idForum': forum.idForum}) }}"
+                            <a href="{{ path('forum_view', {'idForum': forum.idForum}) }}"
                                class="forumtitle">{{ forum.title }}</a><br/>
                             <small>{{ forum.description }}</small>
 

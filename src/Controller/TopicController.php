@@ -30,9 +30,9 @@ class TopicController extends AbstractController
 
 
     /**
-     * @Route("/{idTopic}", name="topic_show", methods={"GET"})
+     * @Route("/{idTopic}", name="topic_view", methods={"GET"})
      */
-    public function show(Topic $topic): Response
+    public function view(Topic $topic): Response
     {
         $topic = $this->getDoctrine()
             ->getRepository(Topic::class)
@@ -73,12 +73,12 @@ class TopicController extends AbstractController
     /**
      * @Route("/{idTopic}", name="topic_show", methods={"GET"})
      */
-/*    public function show(Topic $topic): Response
+    public function show(Topic $topic): Response
     {
         return $this->render('topic/show.html.twig', [
             'topic' => $topic,
         ]);
-    }*/
+    }
 
     /**
      * @Route("/{idTopic}/edit", name="topic_edit", methods={"GET","POST"})

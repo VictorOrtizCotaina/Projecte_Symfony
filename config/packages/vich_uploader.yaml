@@ -10,3 +10,21 @@ vich_uploader:
             inject_on_load: false
             delete_on_update: true
             delete_on_remove: true
+
+        category_image:
+            uri_prefix: /img/category
+            upload_destination: '%kernel.project_dir%/public/img/category'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
+
+        forum_image:
+            uri_prefix: /img/forum
+            upload_destination: '%kernel.project_dir%/public/img/forum'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true

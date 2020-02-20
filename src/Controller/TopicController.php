@@ -71,7 +71,7 @@ class TopicController extends AbstractController
     }
 
     /**
-     * @Route("/show/{idTopic}", name="topic_show", methods={"GET"})
+     * @Route("/{idTopic}/show", name="topic_show", methods={"GET"})
      */
     public function show(Topic $topic): Response
     {
